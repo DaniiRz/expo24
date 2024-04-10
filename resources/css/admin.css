@@ -1,0 +1,115 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+    /* Asegura que la barra de navegación esté por encima del sidebar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70px;
+    background-color: #343a40;
+    padding-top: 70px;
+    z-index: 998;
+    transition: width 0.3s;
+}
+
+.sidebar:hover {
+    width: 250px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: padding-left 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+.sidebar .active {
+    background-color: #495057;
+}
+
+.sidebar .icon {
+    margin-right: 10px;
+}
+
+.sidebar:hover a {
+    padding-left: 20px;
+}
+
+.sidebar a .sidebar-text {
+    display:inline-flex;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.sidebar a:hover .sidebar-text {
+    opacity: 1;
+}
+
+.content {
+    margin-left: 70px;
+    padding: 20px;
+}
+
+/* css de barra de busqueda*/
+
+.inputBox_container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    max-width: 14em;
+    width: fit-content;
+    height: fit-content;
+    background-color: #5c6370;
+    border-radius: 0.8em;
+    overflow: hidden;
+  }
+  
+  .search_icon {
+    height: 1em;
+    padding: 0 0.5em 0 0.8em;
+    fill: #abb2bf;
+  }
+  
+  .inputBox {
+    background-color: transparent;
+    color: #ffffff;
+    outline: none;
+    width: 100%;
+    border: 0;
+    padding: 0.5em 1.5em 0.5em 0;
+    font-size: 1em;
+  }
+  
+  ::placeholder {
+    color: #abb2bf;
+  }
