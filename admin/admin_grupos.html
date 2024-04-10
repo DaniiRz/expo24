@@ -44,6 +44,79 @@
                 Sesión</span></a>
     </div>
 
+    <!-- grupos o proyectos registrados-->
+    <div class="content text-center">
+        <p class="font-weight-bold">Proyectos Registrados</p>
+        <div class="d-flex align-items-center justify-content-center mt-5">
+            <div class="inputBox_container mr-3">
+                <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="search icon">
+                    <path
+                        d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z">
+                    </path>
+                </svg>
+                <input class="inputBox" id="inputBox" type="text" placeholder="Escriba aquí">
+            </div>
+            <!-- Botones desplegables -->
+            <div class="dropdown mr-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Nivel
+                </button>
+            </div>
+            <div class="dropdown mr-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Grado
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sección
+                </button>
+            </div>
+        </div>
+
+        <!-- tabla contenido-->
+        <div class="table-responsive mt-5">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre Proyecto</th>
+                        <th scope="col">Especialidad</th>
+                        <th scope="col">Grado</th>
+                        <th scope="col">Sección</th>
+                        <th scope="col">Grupo</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">URL Site</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>SAR</td>
+                        <td>Software</td>
+                        <td>Tercer Año</td>
+                        <td>A</td>
+                        <td>2</td>
+                        <td>Activo</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>MyLoan</td>
+                        <td>Software</td>
+                        <td>Segundo Año</td>
+                        <td>B</td>
+                        <td>1</td>
+                        <td>Cancelado</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
