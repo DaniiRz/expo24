@@ -2,30 +2,64 @@
 <html lang="es">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inicio</title>
-        <link type="image/png" rel="icon" href="../../resources/img/logo_rical.png">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" href="../../resources/css/admin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link type="image/png" rel="icon" href="../../resources/img/logo_rical.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/admin.css">
+    <link rel="stylesheet" href="../../resources/css/inicio.css">
 </head>
 
 <div id="menuContent"></div>
 
 <body>
 
+    <main>
+        <div class="content text-center">
+            <p class="fs-1">¡Bienvenido!</p>
+            <span id="fecha"></span>
+        </div>
+
+        <div class="container mt-4">
+            <div class="card shadow-lg" style="max-width: 400px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center">
+                        <!-- Cambiar el tamaño de la columna para centrar el GIF -->
+                        <img src="../../resources/img/icons8-test-aprobado.gif" class="card-img" alt="GIF del Proyecto"
+                            style="max-width: 150px; margin: auto;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyectos Registrados</h5>
+                            <p class="card-text">Haz clic en el botón para ver los proyectos que has registrado.</p>
+                            <!-- Botón para redirigir a la página de proyectos -->
+                            <button>
+                                <a href="../../views/admin/admin_proyectos.html">Ver Proyectos</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
-        <div id="footerIndex"></div>
+    </main>
 
 
-        <script src="../../controllers/utils/plantillas.js"></script>
-        <script src="../../controllers/utils/cargar_plantillas.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <div id="footerIndex"></div>
+
+
+    <script src="../../controllers/utils/plantillas.js"></script>
+    <script src="../../controllers/utils/cargar_plantillas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--Scrip de js con fecha-->
+    <script src="../../resources/js/fecha.js"></script>
 </body>
 
 </html>
