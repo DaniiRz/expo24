@@ -2,129 +2,130 @@
 <html lang="es">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Estudiantes ITR</title>
-        <link type="image/png" rel="icon" href="../../resources/img/logo_rical.png">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" href="../../resources/css/admin.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes ITR</title>
+    <link type="image/png" rel="icon" href="../../resources/img/logo_rical.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/admin.css">
 </head>
 <div id="menuContent"></div>
 
 <body>
-        <div class="content text-center">
-                <p class="font-weight-bold">Administracio de Estudiantes</p>
-                <div class="d-flex align-items-center justify-content-center mt-5">
-                        <div class="inputBox_container mr-3">
-                                <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
-                                        alt="search icon">
-                                        <path
-                                                d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z">
-                                        </path>
-                                </svg>
-                                <input class="inputBox" id="inputBox" type="text" placeholder="Escriba aquí">
-                        </div>
-                        <!-- Botones desplegables -->
-                        <div class="dropdown mr-3">
-                                <button class="btn btn-secondary dropdown-toggle show" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-                                  Especialidad
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-dark show" data-popper-placement="bottom-start" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
-                                  <li><a class="dropdown-item active" href="#">Auto</a></li>
-                                  <li><a class="dropdown-item" href="#">Software</a></li>
-                                  <li><a class="dropdown-item" href="#">EMCA</a></li>
-                                  <li><a class="dropdown-item" href="#">ECA</a></li>
-                                  <li><a class="dropdown-item" href="#">Conta</a></li>
-                                  <li><a class="dropdown-item" href="#">Arqui</a></li>
-                                </ul>
-                        </div>
-                        
-                        <div class="dropdown mr-3">
-                                <button class="btn btn-secondary dropdown-toggle show" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-                                  Grado
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-dark show" data-popper-placement="bottom-start" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
-                                  <li><a class="dropdown-item active" href="#">7° Grado</a></li>
-                                  <li><a class="dropdown-item" href="#">8° Grado</a></li>
-                                  <li><a class="dropdown-item" href="#">9° Grado</a></li>
-                                  <li><a class="dropdown-item" href="#">1° Año</a></li>
-                                  <li><a class="dropdown-item" href="#">2° Año</a></li>
-                                  <li><a class="dropdown-item" href="#">3° Año</a></li>
-                                </ul>
-                        </div>
-                        
-                </div>
+    <div class="content text-center">
+        <p class="font-weight-bold">Administración de Estudiantes</p>
+        <div class="d-flex align-items-center justify-content-center mt-5">
+            <div class="inputBox_container mr-3">
+                <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="search icon">
+                    <path
+                        d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z">
+                    </path>
+                </svg>
+                <input class="inputBox" id="inputBox" type="text" placeholder="Escriba aquí">
+            </div>
+            <!-- Botones desplegables -->
+            <div class="dropdown mr-3">
+                <button class="btn btn-secondary dropdown-toggle show" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="true">
+                    Especialidad
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark show" data-popper-placement="bottom-start"
+                    style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
+                    <li><a class="dropdown-item active" href="#">Auto</a></li>
+                    <li><a class="dropdown-item" href="#">Software</a></li>
+                    <li><a class="dropdown-item" href="#">EMCA</a></li>
+                    <li><a class="dropdown-item" href="#">ECA</a></li>
+                    <li><a class="dropdown-item" href="#">Conta</a></li>
+                    <li><a class="dropdown-item" href="#">Arqui</a></li>
+                </ul>
+            </div>
 
-                <!-- tabla contenido-->
-                <div class="table-responsive mt-5">
-                        <table class="table table-striped">
-                                <thead>
-                                        <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Nombre de Etudiante</th>
-                                                <th scope="col">Especialidad</th>
-                                                <th scope="col">Grado</th>
-                                                <th scope="col">Sección</th>
-                                                <th scope="col">Grupo</th>
-                                                <th scope="col">Carnet</th>
-                                                <th scope="col">Correo</th>
-                                                
-                                        </tr>
-                                </thead>
-                                <tbody>
-                                        <tr>
-                                                <th scope="row">1</th>
-                                                <td>Osmar Alejandro Rodas</td>
-                                                <td>Auto</td>
-                                                <td>Tercer Año</td>
-                                                <td>A</td>
-                                                <td>2</td>
-                                                <td>20200167</td>
-                                                <td>20200167@ricaldone.edu.sv</td>
-                                                
-                                        </tr>
-                                        <tr>
-                                                <th scope="row">2</th>
-                                                <td>Diego Jose Rodas</td>
-                                                <td>Arquitectura</td>
-                                                <td>Primer Año</td>
-                                                <td>A</td>
-                                                <td>2</td>
-                                                <td>20245378</td>
-                                                <td>20245378@ricaldone.edu.sv</td>
-                                        </tr>
-                                        <tr>
-                                                <th scope="row">3</th>
-                                                <td>Andres Pacheco Hernandez</td>
-                                                <td>Software</td>
-                                                <td>Tercer Año</td>
-                                                <td>B</td>
-                                                <td>1</td>
-                                                <td>20217843</td>
-                                                <td>20217843@ricaldone.edu.sv</td>
-                                        </tr>
-                                </tbody>
-                        </table>
-                </div>
+            <div class="dropdown mr-3">
+                <button class="btn btn-secondary dropdown-toggle show" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="true">
+                    Grado
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark show" data-popper-placement="bottom-start"
+                    style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
+                    <li><a class="dropdown-item active" href="#">7° Grado</a></li>
+                    <li><a class="dropdown-item" href="#">8° Grado</a></li>
+                    <li><a class="dropdown-item" href="#">9° Grado</a></li>
+                    <li><a class="dropdown-item" href="#">1° Año</a></li>
+                    <li><a class="dropdown-item" href="#">2° Año</a></li>
+                    <li><a class="dropdown-item" href="#">3° Año</a></li>
+                </ul>
+            </div>
+
         </div>
 
+        <!-- tabla contenido-->
+        <div class="table-responsive mt-5">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre de Etudiante</th>
+                        <th scope="col">Especialidad</th>
+                        <th scope="col">Grado</th>
+                        <th scope="col">Sección</th>
+                        <th scope="col">Grupo</th>
+                        <th scope="col">Carnet</th>
+                        <th scope="col">Correo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Osmar Alejandro Rodas</td>
+                        <td>Auto</td>
+                        <td>Tercer Año</td>
+                        <td>A</td>
+                        <td>2</td>
+                        <td>20200167</td>
+                        <td>20200167@ricaldone.edu.sv</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Diego Jose Rodas</td>
+                        <td>Arquitectura</td>
+                        <td>Primer Año</td>
+                        <td>A</td>
+                        <td>2</td>
+                        <td>20245378</td>
+                        <td>20245378@ricaldone.edu.sv</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Andres Pacheco Hernandez</td>
+                        <td>Software</td>
+                        <td>Tercer Año</td>
+                        <td>B</td>
+                        <td>1</td>
+                        <td>20217843</td>
+                        <td>20217843@ricaldone.edu.sv</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
 
 
 
 
-        <div id="footerIndex"></div>
-        <script src="../../controllers/utils/plantillas.js"></script>
-        <script src="../../controllers/utils/cargar_plantillas.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <div id="footerIndex"></div>
+    <script src="../../controllers/utils/plantillas.js"></script>
+    <script src="../../controllers/utils/cargar_plantillas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
