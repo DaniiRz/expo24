@@ -120,3 +120,11 @@ body {
     bottom: 0;
     width: 100%;
 }
+
+#footer2{
+    background-color: transparent;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
