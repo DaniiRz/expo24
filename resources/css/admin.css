@@ -28,14 +28,20 @@ body {
     left: 0;
     height: 100%;
     width: 70px;
+    /* Ancho inicial del sidebar */
     background-color: #343a40;
     padding-top: 70px;
-    z-index: 998;
     transition: width 0.3s;
+    /* Transición suave para el cambio de ancho */
+    overflow-y: auto;
+    /* Agrega barra de desplazamiento vertical */
+    z-index: 1000;
+    /* Asegura que el sidebar esté por encima del contenido */
 }
 
 .sidebar:hover {
     width: 250px;
+    /* Ancho expandido del sidebar en hover */
 }
 
 .sidebar a {
@@ -44,8 +50,13 @@ body {
     color: #ffffff;
     text-decoration: none;
     overflow: hidden;
+    /* Oculta el texto que desborda el contenedor */
     white-space: nowrap;
+    /* Evita que el texto se ajuste automáticamente a varias líneas */
     transition: padding-left 0.3s;
+    /* Transición suave para el desplazamiento del texto */
+    margin-top: 2px;
+    /* Agrega espacio entre los elementos */
 }
 
 .sidebar a:hover {
@@ -62,23 +73,68 @@ body {
 
 .sidebar:hover a {
     padding-left: 20px;
+    /* Desplaza el texto hacia la derecha en hover */
 }
 
 .sidebar a .sidebar-text {
-    display: inline-flex;
+    display: none;
+    /* Oculta los nombres de los menús inicialmente */
     opacity: 0;
-    transition: opacity 0.5s;
+    /* Los hace semi-transparentes */
+    transition: opacity 0.3s;
+    /* Transición suave para la opacidad */
+    font-size: 14px;
+    /* Tamaño de fuente más pequeño */
 }
 
-.sidebar a:hover .sidebar-text {
+.sidebar:hover .sidebar-text {
     opacity: 1;
+    /* Muestra los nombres de los menús en hover */
+    display: inline;
+    /* Muestra los nombres de los menús en hover */
+}
+
+.sidebar ul {
+    list-style: none;
+    /* Quita los estilos de la lista */
+    margin: 0;
+    padding: 0;
+    max-height: calc(100vh - 70px);
+    /* Altura máxima menos la altura del navbar */
+    overflow-y: auto;
+    /* Barras de desplazamiento vertical */
+}
+
+.sidebar ul li {
+    display: none;
+    /* Oculta los elementos de la lista */
+}
+
+.collapse.show {
+    display: block;
+}
+
+@media (min-width: 992px) {
+
+    /* Estilos para pantallas grandes */
+    .sidebar ul li {
+        display: block;
+        /* Muestra los elementos de la lista en pantallas grandes */
+    }
+
+    .sidebar:hover a .sidebar-text {
+        display: inline;
+        /* Muestra los nombres de los menús en hover */
+        opacity: 1;
+        /* Los hace completamente visibles */
+    }
 }
 
 .content {
-    margin-left: 70px;
+    margin-left: 250px;
+    /* Ajusta el margen izquierdo para dar espacio al sidebar */
     padding: 20px;
 }
-
 /* css de barra de busqueda*/
 
 .inputBox_container {
@@ -121,7 +177,7 @@ body {
     width: 100%;
 }
 
-#footer2{
+#footer2 {
     background-color: transparent;
     padding: 10px;
     position: fixed;

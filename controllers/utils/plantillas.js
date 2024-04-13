@@ -1,6 +1,6 @@
 function generarMenuIndex() {
 
-const menuContent = `
+        const menuContent = ` 
 
 <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="../admin/inicio.html"><img src="../../resources/img/logo_header.png" alt="Logo"></a>
@@ -10,37 +10,59 @@ const menuContent = `
     </button>
 </nav>
 
-<div class="sidebar mt-5">
-    <a href="../admin/inicio.html" class="active"><img src="../../resources/img/hogar.png" alt=""><span
-            class="sidebar-text mx-3">Inicio</span></a>
-    <a href="../admin/admin_grupos.html"><img src="../../resources/img/carpeta-abierta (2).png" alt=""><span
-            class="sidebar-text mt-2 mx-3">Grupos PTC</span></a>
-    <a href="../admin/admin_estudiantes.html"><img src="../../resources/img/alumno.png" alt=""><span
-            class="sidebar-text mt-2 mx-3">Alumnos
-            ITR</span></a>
-    <a href="../admin/admin_profesores.html"><img src="../../resources/img/usuario-de-pizarra.png" alt=""><span
-            class="sidebar-text mt-2 mx-3">Profesores ITR</span></a>
-    <a href="../admin/admin_administradores.html"><img src="../../resources/img/alt-administrador.png" alt=""><span
-            class="sidebar-text mt-2 mx-3">Administradores
-            ITR</span></a>
-    <a href="../admin/admin_propuestas.html"><img
-            src="../../resources/img/configuracion-alternativa-del-flujo-de-trabajo.png" alt=""><span
-            class="sidebar-text mt-2 mx-3">Propuestas PTC</span></a>
-    <a href="../admin/admin_cursos.html"><img src="../../resources/img/leccion.png" alt=""><span
-            class="sidebar-text mt-2 mx-3">Gestionar
-            Cursos</span></a>
-    <a href="../admin/index.html"><img src="../../resources/img/salida.png" alt=""><span
-            class="sidebar-text mt-2 mx-3">Cerrar
-            Sesión</span></a>
+ <div class="sidebar">
+ <a href="../admin/inicio.html" class="active"><img src="../../resources/img/hogar.png" alt=""><span
+         class="sidebar-text mx-3">Inicio</span></a>
+ <a href="../admin/admin_estudiantes.html" class="mt-2"><img src="../../resources/img/alumno.png" alt=""><span
+         class="sidebar-text mx-3">Alumnos
+         ITR</span></a>
+ <a href="../admin/admin_profesores.html" class="mt-2"><img src="../../resources/img/usuario-de-pizarra.png"
+         alt=""><span
+         class="sidebar-text mx-3">Profesores ITR</span></a>
+ <a href="../admin/admin_administradores.html" class="mt-2"><img
+         src="../../resources/img/alt-administrador.png" alt=""><span
+         class="sidebar-text mx-3">Administradores
+         ITR</span></a>
+ <a href="#" data-toggle="collapse" data-target="#subopciones" class="mt-2"><img src="../../resources/img/carpeta-abierta (2).png"
+         alt=""><span class="sidebar-text mx-3">Gestionar Formularios ↓</span></a>
+ <div id="subopciones" class="collapse">
+     <ul>
+         <li><a href="#">Roles PTC</a></li>
+         <li><a href="#">Tipos de Propuestas</a></li>
+         <li><a href="#">Estados de Propuestas</a></li>
+         <li><a href="#">Rubros Comerciales</a></li>
+     </ul>
+ </div>
+ <a href="#" data-toggle="collapse" data-target="#subopciones2" class="mt-2"><img src="../../resources/img/caracteristicas.png"
+         alt=""><span class="sidebar-text mx-3">Proyectos PTC ↓</span></a>
+ <div id="subopciones2" class="collapse">
+     <ul>
+         <li><a href="#">Crear un Proyecto</a></li>
+         <li><a href="#">Proyectos Existentes</a></li>
+     </ul>
+ </div>
+ <a href="#" data-toggle="collapse" data-target="#subopciones3" class="mt-2"><img src="../../resources/img/leccion (1).png"
+         alt=""><span class="sidebar-text mx-3">Gestionar Cursos ↓</span></a>
+ <div id="subopciones3" class="collapse">
+     <ul>
+         <li><a href="#">Secciones</a></li>
+         <li><a href="#">Especialidad</a></li>
+         <li><a href="#">Grupos</a></li>
+         <li><a href="#">Grados</a></li>
+     </ul>
+ </div>
+ <a href="../admin/index.html" class="mt-2"><img src="../../resources/img/salida.png" alt=""><span
+         class="sidebar-text mx-3">Cerrar
+         Sesión</span></a>
 </div>`;
 
-return menuContent;
+        return menuContent;
 
 }
 
 function generarFooterIndex() {
 
-const footerIndex = `
+        const footerIndex = `
 <footer id="footer" class="text-center">
     <div class="container">
         <div class="row">
@@ -52,6 +74,6 @@ const footerIndex = `
     </div>
 </footer>
 `;
-return footerIndex;
+        return footerIndex;
 
 }
