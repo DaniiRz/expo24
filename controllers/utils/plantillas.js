@@ -41,11 +41,11 @@ function generarMenuIndex() {
          <li><a href="#">Proyectos Existentes</a></li>
      </ul>
  </div>
- <a href="#" data-toggle="collapse" data-target="#subopciones3" class="mt-2"><img src="../../resources/img/leccion (1).png"
+ <a href="../../views/admin/admin_cursos.html" data-toggle="collapse" data-target="#subopciones3" class="mt-2"><img src="../../resources/img/leccion (1).png"
          alt=""><span class="sidebar-text mx-3">Gestionar Cursos ↓</span></a>
  <div id="subopciones3" class="collapse">
      <ul>
-         <li><a href="#">Secciones</a></li>
+         <li><a href="../../views/admin/admin_secciones.html">Secciones</a></li>
          <li><a href="#">Especialidad</a></li>
          <li><a href="#">Grupos</a></li>
          <li><a href="#">Grados</a></li>
