@@ -27,10 +27,10 @@ function generarMenuIndex() {
          alt=""><span class="sidebar-text mx-3">Gestionar Formularios ↓</span></a>
  <div id="subopciones" class="collapse">
      <ul>
-         <li><a href="#">Roles PTC</a></li>
-         <li><a href="#">Tipos de Propuestas</a></li>
-         <li><a href="#">Estados de Propuestas</a></li>
-         <li><a href="#">Rubros Comerciales</a></li>
+         <li><a href="../../views/admin/admin_roles_ptc.html">Roles PTC</a></li>
+         <li><a href="../../views/admin/admin_tipo_propuesta_ptc.html">Tipos de Propuestas</a></li>
+         <li><a href="../../views/admin/admin_estado_propuesta_ptc.html">Estados de Propuestas</a></li>
+         <li><a href="../../views/admin/admin_rubros_comerciales_ptc.html">Rubros Comerciales</a></li>
      </ul>
  </div>
  <a href="#" data-toggle="collapse" data-target="#subopciones2" class="mt-2"><img src="../../resources/img/caracteristicas.png"
