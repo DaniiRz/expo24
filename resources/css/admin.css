@@ -149,6 +149,10 @@ body {
     overflow: hidden;
 }
 
+.btn-p{
+    margin-right: 2px;
+}
+
 .search_icon {
     height: 1em;
     padding: 0 0.5em 0 0.8em;

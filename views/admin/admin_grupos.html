@@ -18,8 +18,9 @@
 <body>
 
 
-    <h3 class="titulotxt">Gestiona tus grupos</h3>
+   
     <div class="container">
+        <h3 class="text-center">Gestiona tus grupos</h3>
         <h3 id="mainTitle"></h3>
         <div class="d-flex justify-content-end">
             <button type="button" class="btn btn-dark" onclick="openCreate()">
@@ -29,41 +30,47 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">Grupo</th>
-                            <th scope="col">Acciones</th>
+                            <th scope="col" class="text-center">Grupo</th>
+                            <th scope="col" class="text-center">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row" class="text-center">1</th>
                             <th>
-                                <button type="button" class="btn btn-dark" onclick="openUpdate()">
+                                <div class="d-flex justify-content-center ">
+                                <button type="button" class="btn btn-dark btn-p" onclick="openUpdate()">
                                 <i class="bi bi-pencil"></i>
                             </button>
-                            <button type="button" class="btn btn-dark" onclick="alertaeliminar()">
+                            <button type="button" class="btn btn-dark text-center" onclick="alertaeliminar()">
                                 <i class="bi bi-trash-fill"></i>
+                            </div>
                             </button>
                         </th>
                         </tr>
                         <tr>
-                            <th scope="row">2</th>
+                            <th scope="row" class="text-center">2</th>
                             <th>
-                                <button type="button" class="btn btn-dark" onclick="openUpdate()">
+                                <div class="d-flex justify-content-center ">
+                                <button type="button" class="btn btn-dark btn-p" onclick="openUpdate()">
                                 <i class="bi bi-pencil"></i>
                             </button>
-                            <button type="button" class="btn btn-dark" onclick="alertaeliminar()">
+                            <button type="button" class="btn btn-dark text-center" onclick="alertaeliminar()">
                                 <i class="bi bi-trash-fill"></i>
+                            </div>
                             </button>
                         </th>
                         </tr>
                         <tr>
-                            <th scope="row">3</th>
+                            <th scope="row" class="text-center">3</th>
                             <th>
-                                <button type="button" class="btn btn-dark" onclick="openUpdate()">
+                                <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-dark btn-p" onclick="openUpdate()">
                                 <i class="bi bi-pencil"></i>
                             </button>
-                            <button type="button" class="btn btn-dark" onclick="alertaeliminar()">
+                            <button type="button" class="btn btn-dark text-center" onclick="alertaeliminar()">
                                 <i class="bi bi-trash-fill"></i>
+                            </div>
                             </button>
                         </th>
                         </tr>
@@ -88,7 +95,7 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../../controllers/utils/secciones2,js"></script>
+    <script src="../../controllers/utils/secciones2.js"></script>
 
 </body>
 
