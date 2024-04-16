@@ -21,47 +21,55 @@
     <h3 class="titulotxt">Gestiona tus grupos</h3>
     <div class="container">
         <h3 id="mainTitle"></h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Grupos</th>
-                    <th scope="col">Acciones</th>
-                    <button type="button" class="btn btn-outline-info">+</button>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <th><button type="button" class="btn btn-success" onclick="openUpdate()">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger" onclick="alertaeliminar()">
-                            <i class="bi bi-trash-fill"></i>
-                        </button>
-                    </th>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <th><button type="button" class="btn btn-success" onclick="openUpdate()">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger" onclick="alertaeliminar()">
-                            <i class="bi bi-trash-fill"></i>
-                        </button>
-                    </th>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <th><button type="button" class="btn btn-success" onclick="openUpdate()">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger" onclick="alertaeliminar()">
-                            <i class="bi bi-trash-fill"></i>
-                        </button>
-                    </th>
-                </tr>
-            </tbody>
-        </table>
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-dark" onclick="openCreate()">
+                <i class="bi bi-plus-square-fill"></i>
+            </button></div>
+            <div class="table-responsive mt-5">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Grupo</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <th>
+                                <button type="button" class="btn btn-dark" onclick="openUpdate()">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                            <button type="button" class="btn btn-dark" onclick="alertaeliminar()">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                        </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <th>
+                                <button type="button" class="btn btn-dark" onclick="openUpdate()">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                            <button type="button" class="btn btn-dark" onclick="alertaeliminar()">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                        </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <th>
+                                <button type="button" class="btn btn-dark" onclick="openUpdate()">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                            <button type="button" class="btn btn-dark" onclick="alertaeliminar()">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                        </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
     </div>
 
 
