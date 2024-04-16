@@ -10,7 +10,7 @@ function generarMenuIndex() {
     </button>
 </nav>
 
- <div class="sidebar">
+ <div class="sidebar mt-5">
  <a href="../admin/inicio.html" class="active"><img src="../../resources/img/hogar.png" alt=""><span
          class="sidebar-text mx-3">Inicio</span></a>
  <a href="../admin/admin_estudiantes.html" class="mt-2"><img src="../../resources/img/alumno.png" alt=""><span
