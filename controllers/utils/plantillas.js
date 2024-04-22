@@ -8,7 +8,7 @@ function generarMenuIndex() {
     
 
 
-<div class="sidebar mt-5">
+<div class="sidebar mt-5" id="sidebar">
 <a href="../admin/inicio.html" class="active"><img src="../../resources/img/hogar.png" alt=""><span
         class="sidebar-text mx-3">Inicio</span></a>
 <a href="../../views/admin/admin_cursos.html" data-toggle="collapse" data-target="#subopciones3" class="mt-2"><img
@@ -47,9 +47,9 @@ function generarMenuIndex() {
 <div id="subopciones3" class="collapse">
     <ul>
         <li><a href="../../views/admin/admin_secciones.html">Secciones</a></li>
-        <li><a href="#">Especialidad</a></li>
-        <li><a href="#">Grupos</a></li>
-        <li><a href="#">Grados</a></li>
+        <li><a href="../../views/admin/admin_especialidad.html">Especialidad</a></li>
+        <li><a href="../../views/admin/admin_grupos.html">Grupos</a></li>
+        <li><a href="../../views/admin/admin_grados.html">Grados</a></li>
     </ul>
 </div>
 <a href="../../views/admin/admin_perfil.html" class="mt-2"><img src="../../resources/img/usuario.png" alt=""><span
