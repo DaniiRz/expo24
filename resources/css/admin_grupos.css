@@ -230,3 +230,9 @@ body {
     overflow: hidden;
     cursor: pointer;
 }
+
+.boton-esquina {
+    position: absolute; /* Establecer posición absoluta para el botón */
+    bottom: 200px; /* Espacio desde la parte inferior */
+    right: 200px; /* Espacio desde la derecha */
+  }

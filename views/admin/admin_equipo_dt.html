@@ -4,41 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialidad ITR</title>
+    <title>Equipos ITR</title>
     <link type="image/png" rel="icon" href="../../resources/img/logo_rical.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../../resources/css/admin_grupos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
 </head>
 <div id="menuContent"></div>
 
 <body>
-
-
-
-    <div class="container">
-        <h3 class="text-center mt-3">Gestiona tu especialidad técnica</h3>
+    <div class="container" id="contenedor1">
+        <h3 class="text-center mt-3">Equipo N# Nombre: coordinador</h3>
         <h3 id="mainTitle"></h3>
         <div class="d-flex justify-content-end">
             <button type="button" class="boton-redondo" onclick="openCreate()">
                 <i class="bi bi-plus-square-fill"></i>
             </button>
         </div>
-
+        <!-- tabla contenido-->
 
         <div class="table-responsive mt-5">
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th scope="col" class="text-center">Especialidad</th>
+                        <th scope="col" class="text-center">codigo</th>
+                        <th scope="col" class="text-center">Nombre</th>
+                        <th scope="col" class="text-center">Rol</th>
                         <th scope="col" class="text-center">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row" class="text-center">Desarrollo de Software</th>
+                        <th scope="row" class="text-center">20220215</th>
+                        <th scope="row" class="text-center">Carlos Eduardo Quintanilla</th>
+                        <th scope="row" class="text-center">coordinador</th>
                         <th>
                             <div class="d-flex justify-content-center">
                                 <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
@@ -51,20 +51,9 @@
                         </th>
                     </tr>
                     <tr>
-                        <th scope="row" class="text-center">Administrativo contable</th>
-                        <th>
-                            <div class="d-flex justify-content-center ">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                    <i class="bi bi-trash-fill"></i>
-                            </div>
-                            </button>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center">Arquitectura</th>
+                        <th scope="row" class="text-center">20220215</th>
+                        <th scope="row" class="text-center">Diego Enrrique Juarez Mazariego</th>
+                        <th scope="row" class="text-center">Sub-coordinador</th>
                         <th>
                             <div class="d-flex justify-content-center">
                                 <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
@@ -79,11 +68,21 @@
                 </tbody>
             </table>
         </div>
+        
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary boton-esquina" onclick="openCreate()">
+                <i class="text-center">Ver propuesta de Equipo</i>
+            </button>
+        </div>
     </div>
 
 
-    <div id="footerIndex"></div>
 
+
+
+
+
+    <div id="footerIndex"></div>
     <script src="../../controllers/utils/plantillas.js"></script>
     <script src="../../controllers/utils/cargar_plantillas.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -98,7 +97,6 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../controllers/utils/secciones2.js"></script>
-
 </body>
 
 </html>
