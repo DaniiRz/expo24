@@ -45,6 +45,7 @@ function generarMenuIndex() {
 <div id="subopciones2" class="collapse">
     <ul>
         <li><a href="../../views/admin/admin_crear_proyecto.html">Crear un Proyecto</a></li>
+        <li><a href="../../views/admin/admin_proyecto_existente.html">Equipos</a></li>
         <li><a href="../../views/admin/admin_proyecto_existente.html">Proyectos Existentes</a></li>
     </ul>
 </div>
