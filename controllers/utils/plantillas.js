@@ -2,9 +2,11 @@ function generarMenuIndex() {
 
         const menuContent = ` 
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="../admin/inicio.html"><img src="../../resources/img/logo_header.png" alt="Logo"></a>
-</nav>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="../admin/inicio.html"><img src="../../resources/img/logo_header.png" alt="Logo"></a>
+    </nav>
+    
+
 
 <div class="sidebar mt-5">
 <a href="../admin/inicio.html" class="active"><img src="../../resources/img/hogar.png" alt=""><span
