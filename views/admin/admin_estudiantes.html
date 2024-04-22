@@ -70,11 +70,77 @@
                     <li><a class="dropdown-item" href="#">3° Año</a></li>
                 </ul>
             </div>
-            <div class="d-flex justify-content-end">
-                <button type="button" class="boton-redondo" onclick="openCreate()">
-                    <i class="bi bi-plus-square-fill"></i>
-                </button>
+
+            <!-- Button trigger primer modal   -->
+            <button type="button" class="boton-redondo" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <i class="bi bi-plus-square-fill"></i>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancelar</button>
+                            <button type="button" class="btn btn-primary">Agregar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Agregar Estudiante</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body row g-3">
+                            <div class="col-sm-12 col-md-6">
+                                <label for="nombreProducto" class="form-label">Nombre Completo</label>
+                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                    required>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <label for="nombreProducto" class="form-label">Especialidad</label>
+                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                    required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <label for="nombreProducto" class="form-label">Carnet</label>
+                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                    required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <label for="nombreProducto" class="form-label">Correo Institucional</label>
+                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                    required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <label for="nombreProducto" class="form-label">Curso</label>
+                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 
         </div>
 
