@@ -243,7 +243,7 @@ body {
 #carta {
     background-color: rgba(12, 24, 87, 1);
     border-radius: 20px;
-    display: flex  ;
+    align-items: center;
 }
 
 #carta-img {
@@ -278,4 +278,9 @@ body {
     align-items: center;
     border-radius: 20px;
     justify-content: center;
+}
+
+#texto {
+    font-size: 28px;
+    font-weight: bold;
 }
