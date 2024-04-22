@@ -37,8 +37,8 @@ function generarMenuIndex() {
         ↓</span></a>
 <div id="subopciones2" class="collapse">
     <ul>
-        <li><a href="#">Crear un Proyecto</a></li>
-        <li><a href="#">Proyectos Existentes</a></li>
+        <li><a href="../../views/admin/admin_crear_proyecto.html">Crear un Proyecto</a></li>
+        <li><a href="../../views/admin/admin_proyecto_existente.html">Proyectos Existentes</a></li>
     </ul>
 </div>
 <a href="../../views/admin/admin_cursos.html" data-toggle="collapse" data-target="#subopciones3" class="mt-2"><img
