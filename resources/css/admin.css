@@ -243,4 +243,28 @@ body {
 }
 
 
-/* ccs de perfil de usuario */
+/* ccs de pagina de inicio */
+
+#carta{
+    background-color: rgba(12, 24, 87, 1);
+}
+
+#carta-img{
+    height: 200px;
+
+}
+
+#carta2 {
+    width: 250px; /* Ancho de cada carta */
+    margin: 0 10px; /* Espacio entre cartas */
+  }
+
+#carta2  card-title {
+    font-size: 24px; /* Tamaño del título */
+  }
+  
+#carta2 card-subtitle {
+    font-size: 18px; /* Tamaño del subtítulo */
+  }
+
+
