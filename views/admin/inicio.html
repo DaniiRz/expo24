@@ -17,32 +17,44 @@
 <body>
 
     <main>
-        <div class="content text-center">
-            <p class="fs-1">¡Bienvenido!</p>
-            <span id="fecha"></span>
+        <div class="container mt-2">
+            <div class="text-center">
+                <h3 class="texto-globo">¡Bienvenido!</h3>
+            </div>
         </div>
 
-        <div class="container mt-4">
-            <div class="card shadow-lg" style="max-width: 400px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4 d-flex align-items-center justify-content-center">
-                        <!-- Cambiar el tamaño de la columna para centrar el GIF -->
-                        <img src="../../resources/img/icons8-test-aprobado.gif" class="card-img" alt="GIF del Proyecto"
-                            style="max-width: 150px; margin: auto;">
-                    </div>
-                    <div class="col-md-8">
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-6">
+                    <div class="card border border-primary">
                         <div class="card-body">
-                            <h5 class="card-title">Proyectos Registrados</h5>
-                            <p class="card-text">Haz clic en el botón para ver los proyectos que has registrado.</p>
-                            <!-- Botón para redirigir a la página de proyectos -->
-                            <button>
-                                <a href="../../views/admin/admin_proyectos.html">Ver Proyectos</a>
-                            </button>
+                            <div class="row">
+                                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                    <img src="../../resources/img/icons8-test-aprobado.gif" class="img-fluid" alt="GIF"
+                                        style="max-width: 350px;">
+                                </div>
+                                <div class="col-md-8 d-flex align-items-center">
+                                    <div>
+                                        <h5 class="card-title">Visualiza tus Alumnos</h5>
+                                        <p class="card-text">Haz clic aquí para acceder fácilmente.</p>
+                                        <div>
+                                            <a href="../admin/admin_estudiantes.html" class="btn btn-primary"><i
+                                                    class="animation"></i>Ver Alumnos<i class="animation"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
+
 
 
 
