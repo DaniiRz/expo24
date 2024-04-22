@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de 3er Ciclo</title>
+    <title>Gestión de bachillerato</title>
     <link type="image/png" rel="icon" href="../../resources/img/logo_rical.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="../../resources/css/admin.css">
+    <link rel="stylesheet" href="../../resources/css/admin_grupos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../resources/css/admin_niveles_academicos.css">
 </head>
@@ -18,27 +18,41 @@
 <body>
 
     <div class="container">
-        <h1 class="my-4">Gestión de Bachillerato</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Año</th>
-                    <th scope="col">Agregar Grados</th>
-                    <th scope="col">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2022</td>
-                    <td><button type="button" class="btn btn-primary">Agregar</button></td>
-                    <td>
-                        <button type="button" class="btn btn-info">Editar</button>
-                        <button type="button" class="btn btn-danger">Eliminar</button>
-                    </td>
-                </tr>
-                <!-- Puedes agregar más filas según sea necesario -->
-            </tbody>
-        </table>
+        <h3 class="text-center mt-3">Gestiona tu niveles academicos de bachillerato:</h3>
+        <h3 id="mainTitle"></h3>
+        <div class="table-responsive mt-5">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Año</th>
+                        <th scope="col" class="text-center">Nivel</th>
+                        <th scope="col" class="text-center">Agregar años</th>
+                        <th scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="text-center">Primer año</th>
+                        <th scope="row" class="text-center">bachillerato</th>
+                        <th><div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary" onclick="openCreate()">
+                                <i class="text-center">Agregar</i>
+                            </button>
+                        </div></th>
+                        <th>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                    <i class="bi bi-trash-fill"></i>
+                            </div>
+                            </button>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div id="footerIndex"></div>
