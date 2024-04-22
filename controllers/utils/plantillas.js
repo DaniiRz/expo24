@@ -36,7 +36,7 @@ function generarMenuIndex() {
         <li><a href="../../views/admin/admin_roles_ptc.html">Roles PTC</a></li>
         <li><a href="../../views/admin/admin_tipo_propuesta_ptc.html">Tipos de Propuestas</a></li>
         <li><a href="../../views/admin/admin_estado_propuesta_ptc.html">Estados de Propuestas</a></li>
-        <li><a href="../../views/admin/admin_rubros_comerciales_ptc.html">Rubros Comerciales</a></li>
+        
     </ul>
 </div>
 <a href="#" data-toggle="collapse" data-target="#subopciones2" class="mt-2"><img
@@ -57,7 +57,7 @@ function generarMenuIndex() {
         <li><a href="../../views/admin/admin_secciones.html">Secciones</a></li>
         <li><a href="../../views/admin/admin_especialidad.html">Especialidad</a></li>
         <li><a href="../../views/admin/admin_grupos.html">Grupos</a></li>
-        <li><a href="../../views/admin/admin_grados.html">Grados</a></li>
+        <li><a href="../../views/admin/admin_seleccion_niveles.html">Niveles Académicos</a></li>
     </ul>
 </div>
 <a href="../admin/index.html" class="mt-2"><img src="../../resources/img/salida.png" alt=""><span
