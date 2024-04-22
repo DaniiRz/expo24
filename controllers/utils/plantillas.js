@@ -5,7 +5,9 @@ function generarMenuIndex() {
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <div class="mx-auto">
+            <a class="navbar-brand" href="../../views/admin/inicio.html">
                 <img src="../../resources/img/logo_header.png" alt="Imagen Mediana" height="50">
+            </a>
             </div>
             <a class="navbar-brand" href="../../views/admin/admin_perfil.html">
                 <img src="../../resources/img/perfil.png" alt="Perfil" class="rounded-circle" height="30" style="cursor: pointer;">
