@@ -2,13 +2,20 @@ function generarMenuIndex() {
 
         const menuContent = ` 
 
-        <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="../admin/inicio.html"><img src="../../resources/img/logo_header.png" alt="Logo"></a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <div class="mx-auto">
+                <img src="../../resources/img/logo_header.png" alt="Imagen Mediana" height="50">
+            </div>
+            <a class="navbar-brand" href="../../views/admin/admin_perfil.html">
+                <img src="../../resources/img/perfil.png" alt="Perfil" class="rounded-circle" height="30" style="cursor: pointer;">
+            </a>
+        </div>
     </nav>
     
 
 
-<div class="sidebar mt-5" id="sidebar">
+<div class="sidebar mt-5">
 <a href="../admin/inicio.html" class="active"><img src="../../resources/img/hogar.png" alt=""><span
         class="sidebar-text mx-3">Inicio</span></a>
 <a href="../../views/admin/admin_cursos.html" data-toggle="collapse" data-target="#subopciones3" class="mt-2"><img
@@ -52,8 +59,6 @@ function generarMenuIndex() {
         <li><a href="../../views/admin/admin_grados.html">Grados</a></li>
     </ul>
 </div>
-<a href="../../views/admin/admin_perfil.html" class="mt-2"><img src="../../resources/img/usuario.png" alt=""><span
-        class="sidebar-text mx-3">Perfil</span></a>
 <a href="../admin/index.html" class="mt-2"><img src="../../resources/img/salida.png" alt=""><span
         class="sidebar-text mx-3">Cerrar
         Sesión</span></a>
