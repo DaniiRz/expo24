@@ -2,124 +2,157 @@
 <html lang="es">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Profesores ITR</title>
-        <link type="image/png" rel="icon" href="../../resources/img/logo_rical.png">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" href="../../resources/css/admin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docentes ITR</title>
+    <link type="image/png" rel="icon" href="../../resources/img/logo_rical.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/admin_grupos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <div id="menuContent"></div>
+
 <body>
-        
+    <div class="container">
+        <h3 class="text-center mt-3">Administra los profesores institucionales</h3>
+        <h3 id="mainTitle"></h3>
+        <div class="d-flex align-items-center justify-content-center mt-5">
+            <div class="inputBox_container mr-3">
+                <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="search icon">
+                    <path
+                        d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z">
+                    </path>
+                </svg>
+                <input class="inputBox" id="inputBox" type="text" placeholder="Escriba aquí">
+            </div>
+            <!-- Botones desplegables -->
+            <div class="dropdown mr-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="true">
+                    Nivel Academico
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" data-popper-placement="bottom-start"
+                    style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
+                    <li><a class="dropdown-item active" href="#">Tercer ciclo</a></li>
+                    <li><a class="dropdown-item" href="#">Bachillerato</a></li>
+                </ul>
+            </div>
 
-        <div class="content text-center">
-                <p class="font-weight-bold">Administración de Profesores</p>
-                <div class="d-flex align-items-center justify-content-center mt-5">
-                        <div class="inputBox_container mr-3">
-                                <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
-                                        alt="search icon">
-                                        <path
-                                                d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z">
-                                        </path>
-                                </svg>
-                                <input class="inputBox" id="inputBox" type="text" placeholder="Escriba aquí">
-                        </div>
-                        <!-- Botones desplegables -->
-                        <div class="dropdown mr-3">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Especialidad
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                  <li><a class="dropdown-item" href="#">Auto</a></li>
-                                  <li><a class="dropdown-item" href="#">Emca</a></li>
-                                  <li><a class="dropdown-item" href="#">Sofware</a></li>
-                                  <li><a class="dropdown-item" href="#">Arqui</a></li>
-                                  <li><a class="dropdown-item" href="#">Conta</a></li>
-                                  <li><a class="dropdown-item" href="#">Eca</a></li>
-                                
-                                </ul>
-                        </div>
+            <div class="dropdown mr-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="true">
+                    Especialidad
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" data-popper-placement="bottom-start"
+                    style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
+                    <li><a class="dropdown-item active" href="#">Auto</a></li>
+                    <li><a class="dropdown-item" href="#">Software</a></li>
+                    <li><a class="dropdown-item" href="#">EMCA</a></li>
+                    <li><a class="dropdown-item" href="#">ECA</a></li>
+                    <li><a class="dropdown-item" href="#">Conta</a></li>
+                    <li><a class="dropdown-item" href="#">Arqui</a></li>
+                </ul>
+            </div>
 
-                        <div class="dropdown mr-3">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Grado
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                  <li><a class="dropdown-item" href="#">7° Grado</a></li>
-                                  <li><a class="dropdown-item" href="#">8° Grado</a></li>
-                                  <li><a class="dropdown-item" href="#">9° Grado</a></li>
-                                  <li><a class="dropdown-item" href="#">1° Año</a></li>
-                                  <li><a class="dropdown-item" href="#">2° Año</a></li>
-                                  <li><a class="dropdown-item" href="#">3° Año</a></li>
-                                
-                                </ul>
-                        </div>
+            <div class="dropdown mr-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="true">
+                    Grado
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" data-popper-placement="bottom-start"
+                    style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
+                    <li><a class="dropdown-item active" href="#">7° Grado</a></li>
+                    <li><a class="dropdown-item" href="#">8° Grado</a></li>
+                    <li><a class="dropdown-item" href="#">9° Grado</a></li>
+                    <li><a class="dropdown-item" href="#">1° Año</a></li>
+                    <li><a class="dropdown-item" href="#">2° Año</a></li>
+                    <li><a class="dropdown-item" href="#">3° Año</a></li>
+                </ul>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="boton-redondo" onclick="openCreate()">
+                    <i class="bi bi-plus-square-fill"></i>
+                </button>
+            </div>
 
-
-
-                </div>
-
-                <!-- tabla contenido-->
-                <div class="table-responsive mt-5">
-                        <table class="table table-striped">
-                                <thead>
-                                        <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Nombre de Profesor</th>
-                                                <th scope="col">Carnet</th>
-                                                <th scope="col">Correo</th>
-                                                <th scope="col">Curso</th>
-                                                <th scope="col">Contraseña</th>
-                                        </tr>
-                                </thead>
-                                <tbody>
-                                        <tr>
-                                                <th scope="row">1</th>
-                                                <td>Daniel Willfredo Granados</td>
-                                                <td>74hf64</td>
-                                                <td>danile_granados@ricaldone.edu.sv</td>
-                                                <td>Software 2A</td>
-                                                <td>2HwD32S</td>
-
-                                        </tr>
-                                        <tr>
-                                                <th scope="row">1</th>
-                                                <td>Daniel Willfredo Granados</td>
-                                                <td>74hf64</td>
-                                                <td>danile_granados@ricaldone.edu.sv</td>
-                                                <td>Software 2A</td>
-                                                <td>2HwD32S</td>
-
-                                        </tr>
-                                        <tr>
-                                                <th scope="row">1</th>
-                                                <td>Daniel Willfredo Granados</td>
-                                                <td>74hf64</td>
-                                                <td>danile_granados@ricaldone.edu.sv</td>
-                                                <td>Software 2A</td>
-                                                <td>2HwD32S</td>
-
-                                        </tr>
-                                </tbody>
-                        </table>
-                </div>
         </div>
 
+        <!-- tabla contenido-->
+
+        <div class="table-responsive mt-5">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Nombre Completo</th>
+                        <th scope="col" class="text-center">Especialidad</th>
+                        <th scope="col" class="text-center">Carnet</th>
+                        <th scope="col" class="text-center">Correo Institucional</th>
+                        <th scope="col" class="text-center">Curso a cargo</th>
+                        <th scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="text-center">Daniel Wilfredo Granados</th>
+                        <th scope="row" class="text-center">Desarrollo de Software</th>
+                        <th scope="row" class="text-center">DG2022</th>
+                        <th scope="row" class="text-center">Daniel_granados@ricaldone.edu.sv</th>
+                        <th scope="row" class="text-center">3 Software G2</th>
+                        <th>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                    <i class="bi bi-trash-fill"></i>
+                            </div>
+                            </button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-center">Daniel Carranza</th>
+                        <th scope="row" class="text-center">Desarrollo de Software</th>
+                        <th scope="row" class="text-center">DC2022</th>
+                        <th scope="row" class="text-center">Daniel_carranza@ricaldone.edu.sv</th>
+                        <th scope="row" class="text-center">3 Software G1</th>
+                        <th>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                    <i class="bi bi-trash-fill"></i>
+                            </div>
+                            </button>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
-        <div id="footerIndex"></div>
 
 
-        <script src="../../controllers/utils/plantillas.js"></script>
-        <script src="../../controllers/utils/cargar_plantillas.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+
+
+
+    <div id="footerIndex"></div>
+    <script src="../../controllers/utils/plantillas.js"></script>
+    <script src="../../controllers/utils/cargar_plantillas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../../controllers/utils/secciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../controllers/utils/secciones2.js"></script>
 </body>
 
 </html>
