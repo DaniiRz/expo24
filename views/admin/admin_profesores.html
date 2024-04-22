@@ -11,8 +11,102 @@
         <link rel="stylesheet" href="../../resources/css/admin.css">
 </head>
 <div id="menuContent"></div>
-
 <body>
+        
+
+        <div class="content text-center">
+                <p class="font-weight-bold">Administración de Profesores</p>
+                <div class="d-flex align-items-center justify-content-center mt-5">
+                        <div class="inputBox_container mr-3">
+                                <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                        alt="search icon">
+                                        <path
+                                                d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z">
+                                        </path>
+                                </svg>
+                                <input class="inputBox" id="inputBox" type="text" placeholder="Escriba aquí">
+                        </div>
+                        <!-- Botones desplegables -->
+                        <div class="dropdown mr-3">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Especialidad
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item" href="#">Auto</a></li>
+                                  <li><a class="dropdown-item" href="#">Emca</a></li>
+                                  <li><a class="dropdown-item" href="#">Sofware</a></li>
+                                  <li><a class="dropdown-item" href="#">Arqui</a></li>
+                                  <li><a class="dropdown-item" href="#">Conta</a></li>
+                                  <li><a class="dropdown-item" href="#">Eca</a></li>
+                                
+                                </ul>
+                        </div>
+
+                        <div class="dropdown mr-3">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Grado
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item" href="#">7° Grado</a></li>
+                                  <li><a class="dropdown-item" href="#">8° Grado</a></li>
+                                  <li><a class="dropdown-item" href="#">9° Grado</a></li>
+                                  <li><a class="dropdown-item" href="#">1° Año</a></li>
+                                  <li><a class="dropdown-item" href="#">2° Año</a></li>
+                                  <li><a class="dropdown-item" href="#">3° Año</a></li>
+                                
+                                </ul>
+                        </div>
+
+
+
+                </div>
+
+                <!-- tabla contenido-->
+                <div class="table-responsive mt-5">
+                        <table class="table table-striped">
+                                <thead>
+                                        <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Nombre de Profesor</th>
+                                                <th scope="col">Carnet</th>
+                                                <th scope="col">Correo</th>
+                                                <th scope="col">Curso</th>
+                                                <th scope="col">Contraseña</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                                <th scope="row">1</th>
+                                                <td>Daniel Willfredo Granados</td>
+                                                <td>74hf64</td>
+                                                <td>danile_granados@ricaldone.edu.sv</td>
+                                                <td>Software 2A</td>
+                                                <td>2HwD32S</td>
+
+                                        </tr>
+                                        <tr>
+                                                <th scope="row">1</th>
+                                                <td>Daniel Willfredo Granados</td>
+                                                <td>74hf64</td>
+                                                <td>danile_granados@ricaldone.edu.sv</td>
+                                                <td>Software 2A</td>
+                                                <td>2HwD32S</td>
+
+                                        </tr>
+                                        <tr>
+                                                <th scope="row">1</th>
+                                                <td>Daniel Willfredo Granados</td>
+                                                <td>74hf64</td>
+                                                <td>danile_granados@ricaldone.edu.sv</td>
+                                                <td>Software 2A</td>
+                                                <td>2HwD32S</td>
+
+                                        </tr>
+                                </tbody>
+                        </table>
+                </div>
+        </div>
+
 
 
         <div id="footerIndex"></div>
@@ -23,6 +117,9 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
