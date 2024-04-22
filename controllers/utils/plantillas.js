@@ -34,7 +34,7 @@ function generarMenuIndex() {
 <div id="subopciones" class="collapse">
     <ul>
         <li><a href="../../views/admin/admin_roles_ptc.html">Roles PTC</a></li>
-        <li><a href="../../views/admin/admin_estado_propuesta_ptc.html">Estados de Propuestas</a></li>
+        <li><a href="../../views/admin/admin_estado_propuestas.html">Estados de Propuestas</a></li>
         
     </ul>
 </div>
