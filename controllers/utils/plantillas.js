@@ -54,6 +54,7 @@ function generarMenuIndex() {
         ↓</span></a>
 <div id="subopciones3" class="collapse">
     <ul>
+        <li><a href="../../views/admin/admin_cursos.html">Cursos</a></li>
         <li><a href="../../views/admin/admin_secciones.html">Secciones</a></li>
         <li><a href="../../views/admin/admin_especialidad.html">Especialidad</a></li>
         <li><a href="../../views/admin/admin_grupos.html">Grupos</a></li>
