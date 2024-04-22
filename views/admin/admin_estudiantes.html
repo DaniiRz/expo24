@@ -8,13 +8,15 @@
     <link type="image/png" rel="icon" href="../../resources/img/logo_rical.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="../../resources/css/admin.css">
+    <link rel="stylesheet" href="../../resources/css/admin_grupos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <div id="menuContent"></div>
 
 <body>
-    <div class="content text-center">
-        <p class="font-weight-bold">Administración de Estudiantes</p>
+    <div class="container">
+        <h3 class="text-center mt-3">Gestiona tus estudiantes</h3>
+        <h3 id="mainTitle"></h3>
         <div class="d-flex align-items-center justify-content-center mt-5">
             <div class="inputBox_container mr-3">
                 <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="search icon">
@@ -26,11 +28,11 @@
             </div>
             <!-- Botones desplegables -->
             <div class="dropdown mr-3">
-                <button class="btn btn-secondary dropdown-toggle show" type="button" data-bs-toggle="dropdown"
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="true">
                     Especialidad
                 </button>
-                <ul class="dropdown-menu dropdown-menu-dark show" data-popper-placement="bottom-start"
+                <ul class="dropdown-menu dropdown-menu-dark" data-popper-placement="bottom-start"
                     style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
                     <li><a class="dropdown-item active" href="#">Auto</a></li>
                     <li><a class="dropdown-item" href="#">Software</a></li>
@@ -42,11 +44,11 @@
             </div>
 
             <div class="dropdown mr-3">
-                <button class="btn btn-secondary dropdown-toggle show" type="button" data-bs-toggle="dropdown"
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="true">
                     Grado
                 </button>
-                <ul class="dropdown-menu dropdown-menu-dark show" data-popper-placement="bottom-start"
+                <ul class="dropdown-menu dropdown-menu-dark" data-popper-placement="bottom-start"
                     style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
                     <li><a class="dropdown-item active" href="#">7° Grado</a></li>
                     <li><a class="dropdown-item" href="#">8° Grado</a></li>
@@ -56,59 +58,84 @@
                     <li><a class="dropdown-item" href="#">3° Año</a></li>
                 </ul>
             </div>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="boton-redondo" onclick="openCreate()">
+                    <i class="bi bi-plus-square-fill"></i>
+                </button>
+            </div>
 
         </div>
 
         <!-- tabla contenido-->
+
         <div class="table-responsive mt-5">
-            <table class="table table-striped">
+            <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nombre de Etudiante</th>
-                        <th scope="col">Especialidad</th>
-                        <th scope="col">Grado</th>
-                        <th scope="col">Sección</th>
-                        <th scope="col">Grupo</th>
-                        <th scope="col">Carnet</th>
-                        <th scope="col">Correo</th>
+                        <th scope="col" class="text-center">Nombre Completo</th>
+                        <th scope="col" class="text-center">Especialidad</th>
+                        <th scope="col" class="text-center">Carnet</th>
+                        <th scope="col" class="text-center">Correo Institucional</th>
+                        <th scope="col" class="text-center">Curso</th>
+                        <th scope="col" class="text-center">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Osmar Alejandro Rodas</td>
-                        <td>Auto</td>
-                        <td>Tercer Año</td>
-                        <td>A</td>
-                        <td>2</td>
-                        <td>20200167</td>
-                        <td>20200167@ricaldone.edu.sv</td>
-
+                        <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
+                        <th scope="row" class="text-center">Desarrollo de Software</th>
+                        <th scope="row" class="text-center">20220215</th>
+                        <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
+                        <th scope="row" class="text-center">3 Software B1</th>
+                        <th>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                    <i class="bi bi-trash-fill"></i>
+                            </div>
+                            </button>
+                        </th>
                     </tr>
                     <tr>
-                        <th scope="row">2</th>
-                        <td>Diego Jose Rodas</td>
-                        <td>Arquitectura</td>
-                        <td>Primer Año</td>
-                        <td>A</td>
-                        <td>2</td>
-                        <td>20245378</td>
-                        <td>20245378@ricaldone.edu.sv</td>
+                        <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
+                        <th scope="row" class="text-center">Desarrollo de Software</th>
+                        <th scope="row" class="text-center">20220215</th>
+                        <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
+                        <th scope="row" class="text-center">3 Software B1</th>
+                        <th>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                    <i class="bi bi-trash-fill"></i>
+                            </div>
+                            </button>
+                        </th>
                     </tr>
                     <tr>
-                        <th scope="row">3</th>
-                        <td>Andres Pacheco Hernandez</td>
-                        <td>Software</td>
-                        <td>Tercer Año</td>
-                        <td>B</td>
-                        <td>1</td>
-                        <td>20217843</td>
-                        <td>20217843@ricaldone.edu.sv</td>
+                        <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
+                        <th scope="row" class="text-center">Desarrollo de Software</th>
+                        <th scope="row" class="text-center">20220215</th>
+                        <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
+                        <th scope="row" class="text-center">3 Software B1</th>
+                        <th>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                    <i class="bi bi-trash-fill"></i>
+                            </div>
+                            </button>
+                        </th>
                     </tr>
                 </tbody>
             </table>
         </div>
+    </div>
     </div>
 
 
