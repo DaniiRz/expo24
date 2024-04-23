@@ -97,7 +97,8 @@
                                             data-target="#modalSecundario">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <img src="../../resources/img/juventud.png" class="img-fluid" alt="">
+                                                    <img src="../../resources/img/juventud.png" class="img-fluid"
+                                                        alt="">
                                                 </div>
                                                 <div class="col-12 mt-3">
                                                     <span>Insertar un listado de estudiantes</span>
@@ -113,7 +114,8 @@
                                             data-target="#modalTercero">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <img src="../../resources/img/empleado.png" class="img-fluid" alt="">
+                                                    <img src="../../resources/img/empleado.png" class="img-fluid"
+                                                        alt="">
                                                 </div>
                                                 <div class="col-12 mt-3">
                                                     <span>Agregar un estudiante en concreto</span>
@@ -141,7 +143,11 @@
                         </div>
                         <div class="modal-body">
                             <!-- Contenido del modal secundario -->
-                            <p>Este es el contenido del modal secundario.</p>
+                            <div class="col-sm-12 col-md-12">
+                                <label for="imagenProducto" class="form-label">Archivo</label>
+                                <input id="imagenProducto" type="file" name="imagenProducto" class="form-control"
+                                    accept=".png, .jpg">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,91 +159,120 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="modalTerceroLabel">Modal Tercero</h5>
+                            <h5 class="modal-title" id="modalTerceroLabel">Agregar estudiante</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body row g-3">
                             <!-- Contenido del modal Tercero -->
-                            <p>Este es el contenido del modal Tercero.</p>
+                            <div class="col-sm-12 col-md-6 ">
+                                <label for="nombreProducto" class="form-label">Nombre Estudiante</label>
+                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                    required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <label for="nombreProducto" class="form-label">Estudiante</label>
+                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                    required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <label for="nombreProducto" class="form-label">Carnet</label>
+                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                    required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <label for="nombreProducto" class="form-label">Correo institucional</label>
+                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                    required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <label for="nombreProducto" class="form-label">Curso</label>
+                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Agregar</button>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
 
-        <!-- tabla contenido-->
 
-        <div class="table-responsive mt-5">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col" class="text-center">Nombre Completo</th>
-                        <th scope="col" class="text-center">Especialidad</th>
-                        <th scope="col" class="text-center">Carnet</th>
-                        <th scope="col" class="text-center">Correo Institucional</th>
-                        <th scope="col" class="text-center">Curso</th>
-                        <th scope="col" class="text-center">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
-                        <th scope="row" class="text-center">Desarrollo de Software</th>
-                        <th scope="row" class="text-center">20220215</th>
-                        <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
-                        <th scope="row" class="text-center">3 Software B1</th>
-                        <th>
-                            <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                    <i class="bi bi-trash-fill"></i>
-                            </div>
+    </div>
+
+    <!-- tabla contenido-->
+
+    <div class="table-responsive mt-5">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">Nombre Completo</th>
+                    <th scope="col" class="text-center">Especialidad</th>
+                    <th scope="col" class="text-center">Carnet</th>
+                    <th scope="col" class="text-center">Correo Institucional</th>
+                    <th scope="col" class="text-center">Curso</th>
+                    <th scope="col" class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
+                    <th scope="row" class="text-center">Desarrollo de Software</th>
+                    <th scope="row" class="text-center">20220215</th>
+                    <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
+                    <th scope="row" class="text-center">3 Software B1</th>
+                    <th>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                <i class="bi bi-pencil"></i>
                             </button>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
-                        <th scope="row" class="text-center">Desarrollo de Software</th>
-                        <th scope="row" class="text-center">20220215</th>
-                        <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
-                        <th scope="row" class="text-center">3 Software B1</th>
-                        <th>
-                            <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                    <i class="bi bi-trash-fill"></i>
-                            </div>
+                            <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                <i class="bi bi-trash-fill"></i>
+                        </div>
+                        </button>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
+                    <th scope="row" class="text-center">Desarrollo de Software</th>
+                    <th scope="row" class="text-center">20220215</th>
+                    <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
+                    <th scope="row" class="text-center">3 Software B1</th>
+                    <th>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                <i class="bi bi-pencil"></i>
                             </button>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
-                        <th scope="row" class="text-center">Desarrollo de Software</th>
-                        <th scope="row" class="text-center">20220215</th>
-                        <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
-                        <th scope="row" class="text-center">3 Software B1</th>
-                        <th>
-                            <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                    <i class="bi bi-trash-fill"></i>
-                            </div>
+                            <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                <i class="bi bi-trash-fill"></i>
+                        </div>
+                        </button>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
+                    <th scope="row" class="text-center">Desarrollo de Software</th>
+                    <th scope="row" class="text-center">20220215</th>
+                    <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
+                    <th scope="row" class="text-center">3 Software B1</th>
+                    <th>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                <i class="bi bi-pencil"></i>
                             </button>
-                        </th>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                            <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                <i class="bi bi-trash-fill"></i>
+                        </div>
+                        </button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     </div>
     </div>
 
