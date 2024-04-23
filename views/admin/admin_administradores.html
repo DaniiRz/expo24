@@ -28,7 +28,78 @@
                                 </svg>
                                 <input class="inputBox" id="inputBox" type="text" placeholder="Escriba aquí">
                         </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="boton-redondo" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">
+                                <i class="bi bi-plus-square-fill"></i>
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                        <div class="modal-content">
+                                                <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">Agregar
+                                                                Administrador</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body row g-3">
+                                                        <div class="col-sm-12 col-md-6">
+                                                                <label for="nombreProducto" class="form-label">Nombre
+                                                                        Completo</label>
+                                                                <input id="nombreProducto" type="text"
+                                                                        name="descripcionProducto" class="form-control"
+                                                                        required>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6">
+                                                                <label for="nombreProducto"
+                                                                        class="form-label">Especialidad</label>
+                                                                <input id="nombreProducto" type="text"
+                                                                        name="descripcionProducto" class="form-control"
+                                                                        required>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6">
+                                                                <label for="nombreProducto"
+                                                                        class="form-label">Carnet</label>
+                                                                <input id="nombreProducto" type="text"
+                                                                        name="descripcionProducto" class="form-control"
+                                                                        required>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6">
+                                                                <label for="nombreProducto" class="form-label">Correo
+                                                                        institucional</label>
+                                                                <input id="nombreProducto" type="text"
+                                                                        name="descripcionProducto" class="form-control"
+                                                                        required>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6">
+                                                                <label for="nombreProducto" class="form-label">Curso a
+                                                                        cargo</label>
+                                                                <input id="nombreProducto" type="text"
+                                                                        name="descripcionProducto" class="form-control"
+                                                                        required>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6">
+                                                                <label for="nombreProducto" class="form-label">Contraseña
+                                                                        </label>
+                                                                <input id="nombreProducto" type="password"
+                                                                        name="descripcionProducto" class="form-control"
+                                                                        required>
+                                                        </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Cancelar</button>
+                                                        <button type="button" class="btn btn-primary">Agregar</button>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+
                 </div>
+
 
                 <!-- tabla contenido-->
 
