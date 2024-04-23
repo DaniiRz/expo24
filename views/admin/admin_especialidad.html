@@ -22,63 +22,89 @@
         <h3 class="text-center mt-3">Gestiona tu especialidad técnica</h3>
         <h3 id="mainTitle"></h3>
         <div class="d-flex justify-content-end">
-            <button type="button" class="boton-redondo" onclick="openCreate()">
+            <!-- Button trigger modal -->
+            <button type="button" class="boton-redondo" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <i class="bi bi-plus-square-fill"></i>
             </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Agregar Especialidad</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-sm-12 col-md-6">
+                                <label for="nombreProducto" class="form-label">Nombre Especialidad</label>
+                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
 
-        <div class="table-responsive mt-5">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col" class="text-center">Especialidad</th>
-                        <th scope="col" class="text-center">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row" class="text-center">Desarrollo de Software</th>
-                        <th>
-                            <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                    <i class="bi bi-trash-fill"></i>
-                            </div>
+    <div class="table-responsive mt-5">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">Especialidad</th>
+                    <th scope="col" class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="text-center">Desarrollo de Software</th>
+                    <th>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                <i class="bi bi-pencil"></i>
                             </button>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center">Administrativo contable</th>
-                        <th>
-                            <div class="d-flex justify-content-center ">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                    <i class="bi bi-trash-fill"></i>
-                            </div>
+                            <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                <i class="bi bi-trash-fill"></i>
+                        </div>
+                        </button>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-center">Administrativo contable</th>
+                    <th>
+                        <div class="d-flex justify-content-center ">
+                            <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                <i class="bi bi-pencil"></i>
                             </button>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center">Arquitectura</th>
-                        <th>
-                            <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                    <i class="bi bi-trash-fill"></i>
-                            </div>
+                            <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                <i class="bi bi-trash-fill"></i>
+                        </div>
+                        </button>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-center">Arquitectura</th>
+                    <th>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                <i class="bi bi-pencil"></i>
                             </button>
-                        </th>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                            <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                <i class="bi bi-trash-fill"></i>
+                        </div>
+                        </button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     </div>
 
 
