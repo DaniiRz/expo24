@@ -151,6 +151,16 @@ function editarespecialidad() {
     var myModal = new bootstrap.Modal(document.getElementById('editarespecialidad'));
     myModal.show();
 }
+function editargrupo() {
+    var myModal = new bootstrap.Modal(document.getElementById('editargrupo'));
+    myModal.show();
+}
+function editar3ciclo() {
+    var myModal = new bootstrap.Modal(document.getElementById('editar3ciclo'));
+    myModal.show();
+}
+
+
 
 
 
