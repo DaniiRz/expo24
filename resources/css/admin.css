@@ -280,6 +280,7 @@ body {
     align-items: center;
     border-radius: 20px;
     justify-content: center;
+
 }
 
 #texto {
@@ -339,3 +340,11 @@ body {
 .open-file:hover {
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.048);
 }
+
+/* css para contenedor de inicio*/
+
+#inicio1{
+    margin-right: 5%;
+    padding-right: 5%;
+}
+
