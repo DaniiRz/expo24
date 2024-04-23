@@ -349,3 +349,12 @@ body {
     margin-right: 5%;
     padding-right: 5%;
 }
+
+/* css perfil */
+
+#perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
