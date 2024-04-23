@@ -1,4 +1,4 @@
-Proyecto Técnico Cientifico ITR 2024
+Proyecto Técnico Científico ITR 2024
 "Sistema Administrativo de Proyectos Técnicos"
 
 Integrantes: 
