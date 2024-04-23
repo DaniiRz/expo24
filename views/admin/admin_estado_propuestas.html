@@ -74,7 +74,7 @@
                         <th scope="row" class="text-center">Activo</th>
                         <th>
                             <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                <button type="button" class="boton-redondo btn-p" onclick="editarestado()">
                                     <i class="bi bi-pencil"></i>
                                 </button>
                                 <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
@@ -87,7 +87,7 @@
                         <th scope="row" class="text-center">En espera</th>
                         <th>
                             <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                <button type="button" class="boton-redondo btn-p" onclick="editarestado()">
                                     <i class="bi bi-pencil"></i>
                                 </button>
                                 <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
@@ -100,7 +100,7 @@
                         <th scope="row" class="text-center">Denegado</th>
                         <th>
                             <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                <button type="button" class="boton-redondo btn-p" onclick="editarestado()">
                                     <i class="bi bi-pencil"></i>
                                 </button>
                                 <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
@@ -113,7 +113,7 @@
                         <th scope="row" class="text-center">Confirmado</th>
                         <th>
                             <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                <button type="button" class="boton-redondo btn-p" onclick="editarestado()">
                                     <i class="bi bi-pencil"></i>
                                 </button>
                                 <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
@@ -130,8 +130,26 @@
 
 
 
+    <div class="modal fade" id="editarestado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
-
+                <div class="modal-body row g-3">
+                    <div class="col-sm-12 col-md-6">
+                        <label for="nombreProducto" class="form-label">Nombre estado</label>
+                        <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        
 
 
     <div id="footerIndex"></div>

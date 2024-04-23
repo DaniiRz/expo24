@@ -143,7 +143,7 @@
                         </div>
                         <th>
                             <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                <button type="button" class="boton-redondo btn-p" onclick="editarcursos()">
                                     <i class="bi bi-pencil"></i>
                                 </button>
                                 <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
@@ -156,7 +156,41 @@
             </table>
         </div>
     </div>
-
+    <div class="modal fade" id="editarcursos" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+            <div class="modal-content">
+                    <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Editar curso</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body row g-3">
+                            <div class="col-sm-12 col-md-6">
+                                    <label for="nombreProducto" class="form-label">nombre curso</label>
+                                    <input id="nombreProducto" type="text" name="descripcionProducto"
+                                            class="form-control" required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                    <label for="nombreProducto" class="form-label">Profesor acargo</label>
+                                    <input id="nombreProducto" type="text" name="descripcionProducto"
+                                            class="form-control" required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                    <label for="nombreProducto" class="form-label">Cantidad estudiante</label>
+                                    <input id="nombreProducto" type="text" name="descripcionProducto"
+                                            class="form-control" required>
+                            </div>
+                      
+                    </div>
+                    <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Actualizar</button>
+                    </div>
+            </div>
+    </div>
+</div>
     <div id="footerIndex"></div>
 
     <script src="../../controllers/utils/plantillas.js"></script>
@@ -166,7 +200,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../../controllers/utils/secciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../../controllers/utils/secciones2.js"></script>
 
 </body>
 

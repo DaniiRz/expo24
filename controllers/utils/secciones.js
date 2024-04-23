@@ -131,6 +131,28 @@ function editarprofesores() {
     var myModal = new bootstrap.Modal(document.getElementById('editarprofesores'));
     myModal.show();
 }
+function editarroles() {
+    var myModal = new bootstrap.Modal(document.getElementById('editarroles'));
+    myModal.show();
+}
+function editarestado() {
+    var myModal = new bootstrap.Modal(document.getElementById('editarestado'));
+    myModal.show();
+}
+function editarcursos() {
+    var myModal = new bootstrap.Modal(document.getElementById('editarcursos'));
+    myModal.show();
+}
+function editarseccion() {
+    var myModal = new bootstrap.Modal(document.getElementById('editarseccion'));
+    myModal.show();
+}
+function editarespecialidad() {
+    var myModal = new bootstrap.Modal(document.getElementById('editarespecialidad'));
+    myModal.show();
+}
+
+
 
 function alerta(){
     Swal.fire({
