@@ -236,3 +236,48 @@ body {
     bottom: 200px; /* Espacio desde la parte inferior */
     right: 200px; /* Espacio desde la derecha */
   }
+
+  
+  .form-select-vergon {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #007bff;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #007bff;
+    width: 100%;
+  }
+
+  /* Estilo personalizado para las opciones */
+  .form-select-vergon option {
+    background-color: #f8f9fa;
+    color: #000;
+  }
+
+  .btn2 {
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+}
+.form-select-borde {
+    border: 1px solid #ced4da; /* Color del borde */
+    padding: 0.375rem 0.75rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea */
+    border-radius: 0.25rem; /* Radio de borde */
+  }
