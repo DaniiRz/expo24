@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles Propuesta</title>
+    <title>Visualizar propuesta</title>
     <link type="image/png" rel="icon" href="../../resources/img/logo_rical.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -16,35 +16,34 @@
 
 <body>
     <div class="container">
-        <h2 class="text-center mt-3">Actualizar propuesta</h2>
+        <h2 class="text-center">Propuesta#1</h2>
         <div class="row">
 
             <div class="col-12 mt-3 mb-4 d-flex justify-content-between ">
                 <a href="../../views/admin/admin_propuestas_insti.html" class="btn btn-outline-dark ">
                     <i class="fas fa-arrow-left"></i> Volver
                 </a>
-                
+
             </div>
 
             <div class="col-md-6">
                 <form>
                     <div class="form-group">
                         <label for="nombrePropuesta">Nombre de la propuesta:</label>
-                        <input type="text" class="form-control" id="nombrePropuesta">
+                        <input type="text" disabled class="form-control" id="nombrePropuesta">
                     </div>
                     <div class="form-group">
                         <label for="objetivosPropuesta">Objetivos de la propuesta:</label>
-                        <input type="text" class="form-control" id="objetivosPropuesta">
+                        <input type="text" disabled class="form-control" id="objetivosPropuesta">
                     </div>
                     <div class="form-group">
                         <label for="justificacionPropuesta">Justificación:</label>
-                        <input type="text" class="form-control" id="justificacionPropuesta">
+                        <input type="text" disabled class="form-control" id="justificacionPropuesta">
                     </div>
                 </form>
             </div>
             <div class="col-md-6">
                 <div class="mb-3 mt-2">
-                    <button class="btn btn-primary float-right">Asignar equipo</button>
                     <p class="mt-2">Equipo seleccionado:</p>
                     <table class="table table-responsive">
                         <thead>
@@ -58,13 +57,12 @@
                             <tr>
                                 <td>Curso ejemplo</td>
                                 <td>Juan Pérez</td>
-                                <td><button class="btn btn-danger">Eliminar</button></td>
+
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="mt-5">
-                    <button class="btn btn-secondary float-right">Adjuntar archivo</button>
                     <table class="table table-responsive">
                         <thead>
                             <tr>
@@ -75,19 +73,10 @@
                         <tbody>
                             <tr>
                                 <td>archivo.pdf</td>
-                                <td>
-                                    <button class="btn btn-danger" onclick="alertaeliminar()">Eliminar</button>
-                                    <button class="btn btn-info">Descargar</button>
-                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <div class="col-12 text-center mt-3">
-                <button class="btn btn-danger">Cancelar</button>
-    
-                <button class="btn btn-success">Actualizar propuesta</button>
             </div>
         </div>
     </div>
