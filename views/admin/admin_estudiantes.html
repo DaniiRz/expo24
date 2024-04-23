@@ -71,75 +71,100 @@
                 </ul>
             </div>
 
-            <!-- Button trigger primer modal   -->
-            <button type="button" class="boton-redondo" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <!-- Botón para abrir el modal principal -->
+            <button type="button" class="boton-redondo" data-toggle="modal" data-target="#modalPrincipal">
                 <i class="bi bi-plus-square-fill"></i>
             </button>
 
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
+            <!-- Modal principal -->
+            <div class="modal fade" id="modalPrincipal" tabindex="-1" role="dialog"
+                aria-labelledby="modalPrincipalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="modalPrincipalLabel">Agregar Estudiantes</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
                         <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancelar</button>
-                            <button type="button" class="btn btn-primary">Agregar</button>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <!-- Botón para abrir el modal secundario -->
+                                    <div class="h-100 d-inline-block">
+                                        <button type="button" class="btn btn-dark" data-toggle="modal"
+                                            data-target="#modalSecundario">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <img src="../../resources/img/juventud.png" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="col-12 mt-3">
+                                                    <span>Insertar un listado de estudiantes</span>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <!-- Botón para abrir el modal tercero -->
+                                    <div class="h-100 d-inline-block">
+                                        <button type="button" class="btn btn-dark" data-toggle="modal"
+                                            data-target="#modalTercero">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <img src="../../resources/img/empleado.png" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="col-12 mt-3">
+                                                    <span>Agregar un estudiante en concreto</span>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
+            <!-- Modal secundario -->
+            <div class="modal fade" id="modalSecundario" tabindex="-2" role="dialog"
+                aria-labelledby="modalSecundarioLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Agregar Estudiante</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="modalSecundarioLabel">Modal Secundario</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <div class="modal-body row g-3">
-                            <div class="col-sm-12 col-md-6">
-                                <label for="nombreProducto" class="form-label">Nombre Completo</label>
-                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
-                                    required>
-                            </div>
-                            <div class="col-sm-6 col-md-6">
-                                <label for="nombreProducto" class="form-label">Especialidad</label>
-                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
-                                    required>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <label for="nombreProducto" class="form-label">Carnet</label>
-                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
-                                    required>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <label for="nombreProducto" class="form-label">Correo Institucional</label>
-                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
-                                    required>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <label for="nombreProducto" class="form-label">Curso</label>
-                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Agregar</button>
+                        <div class="modal-body">
+                            <!-- Contenido del modal secundario -->
+                            <p>Este es el contenido del modal secundario.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Modal Terciario -->
+            <div class="modal fade" id="modalTercero" tabindex="-1" role="dialog" aria-labelledby="modalTerceroLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTerceroLabel">Modal Tercero</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Contenido del modal Tercero -->
+                            <p>Este es el contenido del modal Tercero.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
