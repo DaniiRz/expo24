@@ -20,10 +20,10 @@ function generarMenuIndex() {
 <div class="sidebar mt-5">
 <a href="../admin/inicio.html" class="active"><img src="../../resources/img/hogar.png" alt=""><span
         class="sidebar-text mx-3">Inicio</span></a>
-<a href="../../views/admin/admin_cursos.html" data-toggle="collapse" data-target="#subopciones3" class="mt-2"><img
+<a href="../../views/admin/admin_cursos.html" data-toggle="collapse" data-target="#subopciones1" class="mt-2"><img
         src="../../resources/img/leccion (1).png" alt=""><span class="sidebar-text mx-3">Usuarios
         ↓</span></a>
-<div id="subopciones3" class="collapse">
+<div id="subopciones1" class="collapse">
     <ul>
         <li><a href="../../views/admin/admin_estudiantes.html">Alumnos ITR</a></li>
         <li><a href="../../views/admin/admin_profesores.html">Profesores ITR</a></li>
@@ -88,3 +88,17 @@ function generarFooterIndex() {
         return footerIndex;
 
 }
+
+$(document).ready(function() {
+    // Al abrir un menú, cierra los demás menús abiertos
+    $('.collapse').on('show.bs.collapse', function () {
+        $('.collapse.show').each(function(){
+            $(this).collapse('hide');
+        });
+    });
+
+    // Al cerrar un menú, asegúrate de cerrar todos los submenús internos
+    $('.collapse').on('hide.bs.collapse', function () {
+        $(this).find('.collapse.show').collapse('hide');
+    });
+});
