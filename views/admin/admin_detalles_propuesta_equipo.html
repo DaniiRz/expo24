@@ -16,28 +16,30 @@
 
 <body>
     <div class="container">
+        <h3 class="text-center mt-3">Detalles Propuesta</h3>
         <div class="row">
+
 
             <div class="col-12 mt-3 mb-4 d-flex justify-content-between ">
                 <a href="../../views/admin/admin_propuestas_equipo.html" class="btn btn-outline-dark ">
                     <i class="fas fa-arrow-left"></i> Volver
                 </a>
-                <h2 class="text-center">Detalles Propuesta</h2>
+
             </div>
 
             <div class="col-md-6">
                 <form>
                     <div class="form-group">
                         <label for="nombrePropuesta">Nombre de la propuesta:</label>
-                        <input type="text" class="form-control" id="nombrePropuesta">
+                        <input type="text" disabled class="form-control" id="nombrePropuesta">
                     </div>
                     <div class="form-group">
                         <label for="objetivosPropuesta">Objetivos de la propuesta:</label>
-                        <input type="text" class="form-control" id="objetivosPropuesta">
+                        <input type="text" disabled class="form-control" id="objetivosPropuesta">
                     </div>
                     <div class="form-group">
                         <label for="justificacionPropuesta">Justificación:</label>
-                        <input type="text" class="form-control" id="justificacionPropuesta">
+                        <input type="text" disabled class="form-control" id="justificacionPropuesta">
                     </div>
                 </form>
             </div>
@@ -45,7 +47,7 @@
                 <div class="mb-3 mt-2">
                 </div>
                 <div class="mt-5">
-                    
+
                     <table class="table table-responsive">
                         <thead>
                             <tr>
@@ -57,8 +59,12 @@
                             <tr>
                                 <td>archivo.pdf</td>
                                 <td>
-                                    <button class="btn btn-danger">Eliminar</button>
-                                    <button class="btn btn-info">Descargar</button>
+                                    <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                                        <i></i>
+                                    </button>
+                                    <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
+                                        <i class="bi bi-trash-fill"></i>
+                                    </button>
                                 </td>
                             </tr>
                         </tbody>
@@ -66,8 +72,9 @@
                 </div>
             </div>
             <div class="col-12 text-center mt-3">
-                <button class="btn btn-danger">Cancelar</button>
-                <button class="btn btn-success">Crear propuesta</button>
+                <button class="btn btn-info">No aceptar</button>
+                <button class="btn btn-success">Aceptar</button>
+                <button class="btn btn-danger" onclick="alertaeliminar()">Eliminar propuesta</button>
             </div>
         </div>
     </div>
@@ -75,13 +82,22 @@
     <div id="footerIndex"></div>
 
     <script src="../../controllers/utils/plantillas.js"></script>
+    <script src="../../controllers/utils/detalles_propuesta.js"></script>
+    <script src="../../controllers/utils/equipos_dt.js"></script>
+    <script src="../../controllers/utils/plantillas.js"></script>
     <script src="../../controllers/utils/cargar_plantillas.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../../controllers/utils/secciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../../controllers/utils/secciones2,js"></script>
+
 </body>
 
 </html>
