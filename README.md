@@ -1,5 +1,5 @@
-Proyecto Tècnico Cientifico ITR 2024
-"Sistema Administrativo de Proyecto Técnicos"
+Proyecto Técnico Cientifico ITR 2024
+"Sistema Administrativo de Proyectos Técnicos"
 
 Integrantes: 
 Carlos Eduardo Quintanilla Escobar 
