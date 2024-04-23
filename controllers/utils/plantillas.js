@@ -10,7 +10,7 @@ function generarMenuIndex() {
             </a>
             </div>
             <a class="navbar-brand" href="../../views/admin/admin_perfil.html">
-                <img src="../../resources/img/perfil.png" alt="Perfil" class="rounded-circle" height="30" style="cursor: pointer;">
+                <img src="../../resources/img/usuario.png" alt="Perfil" class="rounded-circle" height="30" style="cursor: pointer;">
             </a>
         </div>
     </nav>
