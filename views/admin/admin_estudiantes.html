@@ -233,7 +233,7 @@
                     <th scope="row" class="text-center">3 Software B1</th>
                     <th>
                         <div class="d-flex justify-content-center">
-                            <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                            <button type="button" class="boton-redondo btn-p" onclick="editaralumno()">
                                 <i class="bi bi-pencil"></i>
                             </button>
                             <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
@@ -250,7 +250,7 @@
                     <th scope="row" class="text-center">3 Software B1</th>
                     <th>
                         <div class="d-flex justify-content-center">
-                            <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                            <button type="button" class="boton-redondo btn-p" onclick="editaralumno()">
                                 <i class="bi bi-pencil"></i>
                             </button>
                             <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
@@ -267,7 +267,7 @@
                     <th scope="row" class="text-center">3 Software B1</th>
                     <th>
                         <div class="d-flex justify-content-center">
-                            <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
+                            <button type="button" class="boton-redondo btn-p" onclick="editaralumno()">
                                 <i class="bi bi-pencil"></i>
                             </button>
                             <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
@@ -281,6 +281,59 @@
     </div>
     </div>
     </div>
+
+
+    <div class="modal fade" id="editaralumno" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+            <div class="modal-content">
+                    <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Editar Alumno</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body row g-3">
+                            <div class="col-sm-12 col-md-6">
+                                    <label for="nombreProducto" class="form-label">Nombre Completo</label>
+                                    <input id="nombreProducto" type="text" name="descripcionProducto"
+                                            class="form-control" required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                    <label for="nombreProducto" class="form-label">Especialidad</label>
+                                    <input id="nombreProducto" type="text" name="descripcionProducto"
+                                            class="form-control" required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                    <label for="nombreProducto" class="form-label">Carnet</label>
+                                    <input id="nombreProducto" type="text" name="descripcionProducto"
+                                            class="form-control" required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                    <label for="nombreProducto" class="form-label">Correo
+                                            institucional</label>
+                                    <input id="nombreProducto" type="text" name="descripcionProducto"
+                                            class="form-control" required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                    <label for="nombreProducto" class="form-label">Curso a cargo</label>
+                                    <input id="nombreProducto" type="text" name="descripcionProducto"
+                                            class="form-control" required>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                    <label for="nombreProducto" class="form-label">Contraseña</label>
+                                    <input id="nombreProducto" type="password" name="descripcionProducto"
+                                            class="form-control" required>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Actualizar</button>
+                    </div>
+            </div>
+    </div>
+</div>
+
 
 
 
@@ -302,7 +355,7 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../../controllers/utils/secciones2.js"></script>
+
 </body>
 
 </html>

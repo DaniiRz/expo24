@@ -20,10 +20,72 @@
         <h3 class="text-center mt-3">Gestionar cursos:</h3>
         <h3 id="mainTitle"></h3>
         <div class="d-flex justify-content-end">
-            <button type="button" class="boton-redondo" onclick="openCreate()">
+            <!-- Botón para abrir el modal principal -->
+            <button type="button" class="boton-redondo" data-toggle="modal" data-target="#modalPrincipal">
                 <i class="bi bi-plus-square-fill"></i>
             </button>
         </div>
+
+        <!-- Modal principal -->
+        <div class="modal fade" id="modalPrincipal" tabindex="-1" role="dialog" aria-labelledby="modalPrincipalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalPrincipalLabel">AGREGAR CURSO</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body row g-3">
+                        <div class="col-sm-12 col-md-6 ">
+                            <label for="nombreProducto" class="form-label">Nivel Academico</label>
+                            <select class="form-select-borde form-select-vergon" aria-label="Default select example">
+                                <option selected>Seleccionar...</option>
+                                <option value="1">Bachillerato</option>
+                                <option value="2">Tercer Ciclo</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="nombreProducto" class="form-label">Especialidad</label>
+                            <select class="form-select-borde form-select-vergon" aria-label="Default select example">
+                                <option selected>Seleccionar...</option>
+                                <option value="1">Desarrollo de Software</option>
+                                <option value="2">Diseño Grafico</option>
+                                <option value="3">Arquitectura</option>
+                                <option value="4">Automotriz</option>
+                                <option value="5">Electromecanica</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="nombreProducto" class="form-label">Grado</label>
+                            <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                required>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <label for="nombreProducto" class="form-label">Profesor a cargo</label>
+                            <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                required>
+                        </div>
+                        <div class="mt-3 col-sm-12 col-md-6">
+                            <label for="nombreProducto" class="form-label">Grupo</label>
+                            <select class="form-select-borde form-select-vergon" aria-label="Default select example">
+                                <option selected>Seleccionar...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Agregar</button>
+                        <button type="button" class="btn2 btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
         <div class="table-responsive mt-5">
             <table class="table table-hover">
                 <thead>
@@ -40,11 +102,45 @@
                         <th scope="row" class="text-center">Daniel Wilfredo</th>
                         <th>
                             <div class="d-flex justify-content-center">
-                                <button type="button" class="btn btn-secondary" onclick="openCreate()">
-                                    <i class="text-center">Asignar</i>
+                                <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                    data-target="#modalSecundario">
+                                    <i>Asignar</i>
                                 </button>
                             </div>
                         </th>
+                        <div class="modal fade" id="modalSecundario" tabindex="-1" role="dialog"
+                            aria-labelledby="modalPrincipalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalSecundario">Integrantes de grupo disponibles
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body row g-3">
+                                        <div class="col-sm-12">
+                                            <label for="nombreProducto" class="form-label">Cant. Minima</label>
+                                            <input placeholder="3" id="nombreProducto" type="text"
+                                                name="descripcionProducto" class="form-control" required>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <label for="nombreProducto" class="form-label">Cant. Maxima</label>
+                                            <input placeholder="5" id="nombreProducto" type="text"
+                                                name="descripcionProducto" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Agregar</button>
+                                        <button type="button" class="btn2 btn-danger"
+                                            data-bs-dismiss="modal">Cancelar</button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                         <th>
                             <div class="d-flex justify-content-center">
                                 <button type="button" class="boton-redondo btn-p" onclick="openUpdate()">
@@ -70,7 +166,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../../controllers/utils/secciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../../controllers/utils/secciones2,js"></script>
+    <script src="../../controllers/utils/secciones2.js"></script>
 
 </body>
 
