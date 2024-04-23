@@ -45,7 +45,7 @@ function generarMenuIndex() {
         ↓</span></a>
 <div id="subopciones2" class="collapse">
     <ul>
-        <li><a href="../../views/admin/admin_crear_proyecto.html">Crear un Proyecto</a></li>
+        <li><a href="../../views/admin/admin_propuestas_insti.html">Crear un Proyecto</a></li>
         <li><a href="../../views/admin/admin_equipos_ptc.html">Equipos</a></li>
         
     </ul>
