@@ -273,7 +273,7 @@ body {
 }
 
 #padre {
-    background-color: rgba(228, 228, 228, 1);
+    background-color: aliceblue;
     height: 300px;
     width: 1100px;
     display: flex;
@@ -343,8 +343,7 @@ body {
 
 /* css para contenedor de inicio*/
 
-#inicio1{
+#inicio1 {
     margin-right: 5%;
     padding-right: 5%;
 }
-
