@@ -127,6 +127,10 @@ function editaralumno() {
     var myModal = new bootstrap.Modal(document.getElementById('editaralumno'));
     myModal.show();
 }
+function editarprofesores() {
+    var myModal = new bootstrap.Modal(document.getElementById('editarprofesores'));
+    myModal.show();
+}
 
 function alerta(){
     Swal.fire({
