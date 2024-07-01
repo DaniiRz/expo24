@@ -478,11 +478,11 @@ UNLOCK TABLES;
 
 --
 -- Table structure for table `secciones`
---¡
+--
 
 DROP TABLE IF EXISTS `secciones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;¡
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `secciones` (
   `id_seccion` varchar(36) NOT NULL DEFAULT uuid(),
   `secciones` varchar(1) NOT NULL,
