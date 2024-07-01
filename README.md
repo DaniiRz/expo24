@@ -46,8 +46,8 @@ INDICACIONES GENERALES:
 ---HTML---
 
 * Usar snake_case para los nombres de los archivos HTML.
-* Los identeficadores de los elementos (id's) se escribiran usando camelCase y con la siguiente nomeclatura Ejemplo:(idNombreAdministrador)
-* Los names o nombres de los elementos (names's) se escribiran usando camelCase y con la siguiente nomeclatura Ejemplo:(phpNombreAdministrador) de esta forma sera mas fácil diferenciarlos y evitar la espera de identificadores incorrectos
+* Los identeficadores de los elementos (id's) se escribiran usando camelCase y con la siguiente nomeclatura Ejemplo:(NombreAdministrador) y los names's tendrán el mismo nombre
+que los id's
 * Los nombres deben ser claros y descriptivos.
 
 ---MySQL---
