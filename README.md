@@ -22,6 +22,8 @@ INDICACIONES GENERALES:
   
 * Las capertas estaran nombradas en ingles.
 
+* Para crear un archivo controller se debe colocar el nombre del archivo html con el cual trabajara y agregarle el sufijo Controller. Ejemplo: "IndexController.js"
+
 
 *TODOS LOS DOCUMENTOS TENDRAN SANGRIA DE 4 ESPACIOS*
 

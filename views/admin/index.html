@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center" style="height: 100vh;">
             <div>
-                <form class="form_container shadow-lg">
+                <form class=" d-none form_container shadow-lg">
                     <div class="title_container">
                         <p class="title">Instituto Técnico Ricaldone</p>
                         <span class="subtitle">¡Bienvenido!</span>
@@ -52,6 +52,48 @@
                     <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">
                         <a href="../../views/admin/inicio.html" class="link2">Iniciar Sesión</a>
                     </button>
+                </form>
+
+                <!-- Formulario para crear el primer administrador -->
+                <form class="pt-5 mt-5 d-none" id="signupForm">
+                    <div class="container">
+                        <div class="container-fluid row justify-content-center">
+                            <div class="row g-3">
+                                <div class="col-sm-12 col-md-6">
+                                    <label for="nombreAdminSignup" class="form-label">Nombre</label>
+                                    <input id="nombreAdminSignup" type="text" name="nombreAdministrador"
+                                        class="form-control" required oninput="formatAlphabetic(this)">
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <label for="apellidoAdminSignup" class="form-label">Apellido</label>
+                                    <input id="apellidoAdminSignup" type="text" name="apellidoAdministrador"
+                                        class="form-control" required oninput="formatAlphabetic(this)">
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <label for="emailAdminSignup" class="form-label">Correo</label>
+                                    <input id="emailAdminSignup" type="email" name="correoAdministrador"
+                                        class="form-control" required oninput="formatEmail(this)">
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <label for="contraseñaAdminSignup" class="form-label">Contraseña</label>
+                                    <input id="contraseñaAdminSignup" type="password" name="claveAdministrador"
+                                        class="form-control" required oninput="formatPassword(this)">
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <label for="contraseñaConfirmarSignup" class="form-label">Confirmar
+                                        contraseña</label>
+                                    <input id="contraseñaConfirmarSignup" type="password" name="confirmarClave"
+                                        class="form-control" required oninput="formatPassword(this)">
+                                </div>
+                                <div class="text-center mt-3 pt-5">
+                                    <button type="reset" class="btn btn-outline-dark"><i class="bi bi-x-square"></i>
+                                        Cancelar</button>
+                                    <button type="submit" class="btn btn-outline-dark"><i class="bi bi-save"></i>
+                                        Registrarme</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
