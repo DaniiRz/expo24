@@ -13,7 +13,6 @@ class AlumnoHandler
     protected $nombre = null;
     protected $correo = null;
     protected $clave = null;
-
     protected $curso = null; 
 
 
@@ -47,6 +46,24 @@ class AlumnoHandler
                 VALUES (?, ?, ?, ?, ?)'; 
         $params = array($this->nombre, $this->carnet, $this->correo, $this->clave, $this->curso); 
         return Database::executeRow($sql, $params); 
+    }
+
+    //Metodo para leer todos los registros en tabla 
+    public function readAll()
+    {
+        $sql = 'SELECT id_alumno, nombre_alumno, carnet_alumno, correo_alumno
+                FROM alumnos
+                ORDER BY carnet_alumno';
+        return Database::getRows($sql);
+    }
+
+    //Metodo para leer 
+    public function readOne()
+    {
+        $sql = 'SELECT id_admin, nombre_admin, apellido_admin, correo_admin FROM tb_admins
+                WHERE id_admin = ?';
+        $params = array($this->id);
+        return Database::getRow($sql, $params);
     }
 
 }
