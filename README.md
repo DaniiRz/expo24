@@ -9,7 +9,7 @@ Daniela Alexandra Ramirez Chàvez
 
 Osmar Alejandro Rodas Rodriguez 
 
-Andrès Eleazar Hernandez 
+Andrès Eleazar Hernández García
 
 Diego Enrique Juarez Mazariego 
 
