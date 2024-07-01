@@ -1,6 +1,6 @@
 <?php
 // Se incluye la clase del modelo.
-require_once('../../models/data/especialidad_data.php');
+require_once('../../models/data/especialidadData.php');
 
 // Se comprueba si existe una acción a realizar, de lo contrario se finaliza el script con un mensaje de error.
 if (isset($_GET['action'])) {
@@ -11,7 +11,8 @@ if (isset($_GET['action'])) {
     // Se declara e inicializa un arreglo para guardar el resultado que retorna la API.
     $result = array('status' => 0, 'session' => 0, 'message' => null, 'dataset' => null, 'error' => null, 'exception' => null, 'username' => null);
     // Se verifica si existe una sesión iniciada como administrador, de lo contrario se finaliza el script con un mensaje de error.
-    if (isset($_SESSION['idAdministrador']) or true) {
+    if (isset($_SESSION['idAdministrador'] or true)
+    ) {
         $result['session'] = 1;
         // Se compara la acción a realizar cuando un administrador ha iniciado sesión.
         switch ($_GET['action']) {
@@ -28,7 +29,7 @@ if (isset($_GET['action'])) {
             case 'createRow':
                 $_POST = Validator::validateForm($_POST);
                 if (
-                    !$especialidad->setNombre($_POST['nombreProducto']) 
+                    !$especialidad->setNombre($_POST['nombreEspecialidad']) 
                 ) {
                     $result['error'] = $especialidad->getDataError();
                 }   elseif ($especialidad->createRow()) {
@@ -87,7 +88,7 @@ if (isset($_GET['action'])) {
         print(json_encode('Acceso denegado'))
     }
     // Se obtiene la excepción del servidor de base de datos por si ocurrió un problema.
-    $result['exception'] = Database                                      ::getException();
+    $result['exception'] = Database::getException();
     // Se indica el tipo de contenido a mostrar y su respectivo conjunto de caracteres.
     header('Content-type: application/json; charset=utf-8');
     // Se imprime el resultado en formato JSON y se retorna al controlador.
