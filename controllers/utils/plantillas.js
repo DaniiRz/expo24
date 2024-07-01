@@ -89,6 +89,7 @@ function generarFooterIndex() {
 
 }
 
+/*
 $(document).ready(function() {
     // Al abrir un menú, cierra los demás menús abiertos
     $('.collapse').on('show.bs.collapse', function () {
@@ -101,4 +102,4 @@ $(document).ready(function() {
     $('.collapse').on('hide.bs.collapse', function () {
         $(this).find('.collapse.show').collapse('hide');
     });
-});
+});*/
