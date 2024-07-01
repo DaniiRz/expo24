@@ -60,24 +60,24 @@
                         <div class="container-fluid row justify-content-center">
                             <div class="row g-3">
                                 <div class="col-sm-12 col-md-6">
-                                    <label for="nombreAdminSignup" class="form-label">Nombre</label>
-                                    <input id="nombreAdminSignup" type="text" name="nombreAdministrador"
+                                    <label for="nombreAdministrador" class="form-label">Nombre</label>
+                                    <input id="nombreAdministrador" type="text" name="nombreAdministrador"
                                         class="form-control" required oninput="formatAlphabetic(this)">
                                 </div>
                                 <div class="col-sm-12 col-md-6">
-                                    <label for="emailAdminSignup" class="form-label">Correo</label>
-                                    <input id="emailAdminSignup" type="email" name="correoAdministrador"
+                                    <label for="correoAdministrador" class="form-label">Correo</label>
+                                    <input id="correoAdministrador" type="email" name="correoAdministrador"
                                         class="form-control" required oninput="formatEmail(this)">
                                 </div>
                                 <div class="col-sm-12 col-md-6">
-                                    <label for="contraseñaAdminSignup" class="form-label">Contraseña</label>
-                                    <input id="contraseñaAdminSignup" type="password" name="claveAdministrador"
+                                    <label for="claveAdministrador" class="form-label">Contraseña</label>
+                                    <input id="claveAdministrador" type="password" name="claveAdministrador"
                                         class="form-control" required oninput="formatPassword(this)">
                                 </div>
                                 <div class="col-sm-12 col-md-6">
-                                    <label for="contraseñaConfirmarSignup" class="form-label">Confirmar
+                                    <label for="confirmarClave" class="form-label">Confirmar
                                         contraseña</label>
-                                    <input id="contraseñaConfirmarSignup" type="password" name="confirmarClave"
+                                    <input id="confirmarClave" type="password" name="confirmarClave"
                                         class="form-control" required oninput="formatPassword(this)">
                                 </div>
                                 <div class="text-center mt-3 pt-5">
@@ -112,5 +112,5 @@
     <script src="../../controllers/utils/validar_inicio.js"></script>
     <script src="../../controllers/admin/IndexController.js"></script>
     <script src="../../controllers/utils/components.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script3>
+    <script src="../../resources/js/sweetalert.min.js"></script>
 </html>

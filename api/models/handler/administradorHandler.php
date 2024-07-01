@@ -94,7 +94,7 @@ class AdministradorHandler {
     public function createRow()
     {
         $sql = 'INSERT INTO administradores(nombre_administrador, correo_administrador, clave_administrador)
-                VALUES(?, ?, ?, ?)';
+                VALUES(?, ?, ?)';
         $params = array($this->nombre, $this->correo, $this->clave);
         return Database::executeRow($sql, $params);
     }

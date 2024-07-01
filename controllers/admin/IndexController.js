@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (DATA.session) {
         location.href = 'inicio.html';
     } else if (DATA.status) {
-        MAIN_TITLE.textContent = 'Iniciar sesión';
+        // MAIN_TITLE.textContent = 'Iniciar sesión';
         LOGIN_FORM.classList.remove('d-none');
         sweetAlert(4, DATA.message, true);
     } else {
