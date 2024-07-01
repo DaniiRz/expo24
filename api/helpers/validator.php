@@ -1,9 +1,8 @@
 <?php
-//archivo para realizar las validaciones de los datos de entrada 
-class validator
+// Archivo para realizar las validaciones de los datos de entrada 
+class Validator
 {
-
-    // Artributos para manejar validaciones
+    // Atributos para manejar validaciones
     private static $filename = null;
     private static $search_value = null;
     private static $password_error = null;
@@ -40,7 +39,7 @@ class validator
         return self::$search_error;
     }
 
-    // Metodo para sanear todos los campos de un formulario
+    // Método para sanear todos los campos de un formulario
     public static function validateForm($fields)
     {
         foreach ($fields as $index => $value) {
@@ -50,7 +49,7 @@ class validator
         return $fields;
     }
 
-    // Metodo para validar una busqueda
+    // Método para validar una búsqueda
     public static function validateSearch($value)
     {
         if (trim($value) == '') {
@@ -68,7 +67,7 @@ class validator
         }
     }
 
-    // Metodo para validar un numero natural 
+    // Método para validar un número natural 
     public static function validateNaturalNumber($value)
     {
         // Se verifica que el valor sea un número entero mayor o igual a uno.
@@ -79,7 +78,7 @@ class validator
         }
     }
 
-    // Metodo para validar un correo
+    // Método para validar un correo
     public static function validateEmail($value)
     {
         if (filter_var($value, FILTER_VALIDATE_EMAIL)) {
@@ -89,7 +88,7 @@ class validator
         }
     }
 
-    // Metodo para validar longitud  
+    // Método para validar longitud  
     public static function validateLength($value, $min, $max)
     {
         // Se verifica la longitud de la cadena de texto.
@@ -100,7 +99,7 @@ class validator
         }
     }
 
-    // Metodo para validar un dato booleano
+    // Método para validar un dato booleano
     public static function validateBoolean($value)
     {
         if ($value == 1 || $value == 0) {
@@ -110,7 +109,7 @@ class validator
         }
     }
 
-    // Metodo para validar una cadena de texto
+    // Método para validar una cadena de texto
     public static function validateString($value)
     {
         // Se verifica el contenido y la longitud de acuerdo con la base de datos.
@@ -121,7 +120,7 @@ class validator
         }
     }
 
-    // Metodo para validar un dato alfabetico
+    // Método para validar un dato alfabético
     public static function validateAlphabetic($value)
     {
         // Se verifica el contenido y la longitud de acuerdo con la base de datos.
@@ -132,7 +131,7 @@ class validator
         }
     }
 
-    // Metodo para validar un dato alfanumerico
+    // Método para validar un dato alfanumérico
     public static function validateAlphanumeric($value)
     {
         // Se verifica el contenido y la longitud de acuerdo con la base de datos.
@@ -143,19 +142,18 @@ class validator
         }
     }
 
-    
-    // Metodo para validar un dato monetario
-    //public static function validateMoney($value)
-    //{
-        // Se verifica que el número tenga una parte entera y como máximo dos cifras decimales.
-       // if (preg_match('/^[0-9]+(?:\.[0-9]{1,2})?$/', $value)) {
-           // return true;
-        //} else {
-          //  return false;
-        //}
-    //}
+    // Método para validar un UUID
+    public static function validateUUID($value)
+    {
+        // Verifica si el valor es un UUID válido (versión 4)
+        if (preg_match('/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$/', $value)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-    // Metodo para validar una contraseña en registro-login 
+    // Método para validar una contraseña en registro-login 
     public static function validatePassword($value)
     {
         // Se verifica la longitud mínima.
@@ -170,7 +168,7 @@ class validator
         }
     }
 
-    // Metodo para validar el formato del dui
+    // Método para validar el formato del DUI
     public static function validateDUI($value)
     {
         // Se verifica que el número tenga el formato 00000000-0.
@@ -181,7 +179,7 @@ class validator
         }
     }
 
-    // Metodo para validar un numero telefonico
+    // Método para validar un número telefónico
     public static function validatePhone($value)
     {
         // Se verifica que el número tenga el formato 0000-0000 y que inicie con 2, 6 o 7.
@@ -192,10 +190,10 @@ class validator
         }
     }
 
-    // Metodo para validar una fecha
+    // Método para validar una fecha
     public static function validateDate($value)
     {
-        // Se dividen las partes de la fecha y se guardan en un arreglo con el siguiene orden: año, mes y día.
+        // Se dividen las partes de la fecha y se guardan en un arreglo con el siguiente orden: año, mes y día.
         $date = explode('-', $value);
         if (checkdate($date[1], $date[2], $date[0])) {
             return true;
@@ -204,7 +202,7 @@ class validator
         }
     }
 
-    // Metodo para validar un archivo al momento de subirlo al servidor
+    // Método para validar un archivo al momento de subirlo al servidor
     public static function saveFile($file, $path)
     {
         if (!$file) {
@@ -216,7 +214,7 @@ class validator
         }
     }
 
-    // Metodo para validar el cambio de un archivo en el servidor 
+    // Método para validar el cambio de un archivo en el servidor 
     public static function changeFile($file, $path, $old_filename)
     {
         if (!self::saveFile($file, $path)) {
@@ -228,7 +226,7 @@ class validator
         }
     }
 
-    // Metodo para validar un archivo al momento de borrarlo del servidor
+    // Método para validar un archivo al momento de borrarlo del servidor
     public static function deleteFile($path, $filename)
     {
         if ($filename == 'default.png') {
@@ -240,7 +238,7 @@ class validator
         }
     }
 
-    // Metodo para validar un archivo de imagen
+    // Método para validar un archivo de imagen
     public static function validateImageFile($file, $min_dimension)
     {
         if (is_uploaded_file($file['tmp_name'])) {
@@ -271,3 +269,4 @@ class validator
         }
     }
 }
+?>
