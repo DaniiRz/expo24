@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const DATA = await fetchData(USER_API, 'readUsers');
     console.log(DATA)
     if (DATA.session) {
-        location.href = 'inicio.html';
+        location.href = 'index.html';
     } else if (DATA.status) {
         // MAIN_TITLE.textContent = 'Iniciar sesión';
         LOGIN_FORM.classList.remove('d-none');
@@ -34,6 +34,23 @@ SIGNUP_FORM.addEventListener('submit', async (event) => {
     // Se comprueba si la respuesta es satisfactoria, de lo contrario se muestra un mensaje con la excepción.
     if (DATA.status) {
         sweetAlert(1, DATA.message, true, 'index.html');
+    } else {
+        sweetAlert(2, DATA.error, false);
+    }
+});
+
+
+// Método del evento para cuando se envía el formulario de inicio de sesión.
+LOGIN_FORM.addEventListener('submit', async (event) => {
+    // Se evita recargar la página web después de enviar el formulario.
+    event.preventDefault();
+    // Constante tipo objeto con los datos del formulario.
+    const FORM = new FormData(LOGIN_FORM);
+    // Petición para iniciar sesión.
+    const DATA = await fetchData(USER_API, 'logIn', FORM);
+    // Se comprueba si la respuesta es satisfactoria, de lo contrario se muestra un mensaje con la excepción.
+    if (DATA.status) {
+        sweetAlert(1, DATA.message, true, 'inicio.html');
     } else {
         sweetAlert(2, DATA.error, false);
     }

@@ -1,11 +1,12 @@
 <?php
 // Se incluye la clase para trabajar con la base de datos.
-require_once('../helpers/database.php');
+require_once ('../helpers/database.php');
 
 /*
  *  Clase para manejar el comportamiento de los datos de la tabla administradores.
  */
-class AdministradorHandler {
+class AdministradorHandler
+{
     /*
      *  Declaración de atributos para el manejo de datos.
      */
@@ -45,7 +46,7 @@ class AdministradorHandler {
     public function checkUser($correo, $clave)
     {
         $sql = 'SELECT id_administrador, correo_administrador, clave_administrador
-                FROM administradores
+                FROM administradores   
                 WHERE correo_administrador = ?';
         $params = array($correo);
         if (!($data = Database::getRow($sql, $params))) {
@@ -87,7 +88,7 @@ class AdministradorHandler {
         $sql = 'UPDATE administradores
                 SET nombre_administrador = ?,  correo_administrador = ?
                 WHERE id_administrador = ?';
-        $params = array($this->nombre,  $this->correo, $_SESSION['idAdministrador']);
+        $params = array($this->nombre, $this->correo, $_SESSION['idAdministrador']);
         return Database::executeRow($sql, $params);
     }
 
@@ -121,7 +122,7 @@ class AdministradorHandler {
         $sql = 'UPDATE administradores
                 SET nombre_administrador = ?,  correo_administrador = ?
                 WHERE id_administrador = ?';
-        $params = array($this->nombre,  $this->correo, $this->id);
+        $params = array($this->nombre, $this->correo, $this->id);
         return Database::executeRow($sql, $params);
     }
 
@@ -133,4 +134,3 @@ class AdministradorHandler {
         return Database::executeRow($sql, $params);
     }
 }
-?>
