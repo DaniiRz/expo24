@@ -24,6 +24,8 @@ INDICACIONES GENERALES:
 
 * Para crear un archivo controller se debe colocar el nombre del archivo html con el cual trabajara y agregarle el sufijo Controller. Ejemplo: "IndexController.js"
 
+* En lugar de crear un controlador detalle de alguna interfaz, se debe trabajar las tablas relacionadas dentro de un mismo controler.
+
 
 *TODOS LOS DOCUMENTOS TENDRAN SANGRIA DE 4 ESPACIOS*
 
