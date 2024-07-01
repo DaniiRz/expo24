@@ -1,10 +1,12 @@
 <?php
 // Se incluye la clase para validar los datos de entrada.
-require_once('../../helpers/validator.php');
+require_once('../helpers/validator.php');
+
 // Se incluye la clase padre.
-require_once('../../models/handler/administrador_handler.php');
+require_once('../models/handler/administradorHandler.php');
+
 /*
- *  Clase para manejar el encapsulamiento de los datos de la tabla USUARIO.
+ *  Clase para manejar el encapsulamiento de los datos de la tabla administradores.
  */
 class AdministradorData extends AdministradorHandler
 {
@@ -16,7 +18,7 @@ class AdministradorData extends AdministradorHandler
      */
     public function setId($value)
     {
-        if (Validator::validateNaturalNumber($value)) {
+        if (Validator::validateUUID($value)) { // Asumiendo que has creado un validador de UUID
             $this->id = $value;
             return true;
         } else {
@@ -39,21 +41,21 @@ class AdministradorData extends AdministradorHandler
         }
     }
 
-    public function setApellido($value, $min = 2, $max = 50)
+    public function setCarnet($value, $min = 5, $max = 5)
     {
-        if (!Validator::validateAlphabetic($value)) {
-            $this->data_error = 'El apellido debe ser un valor alfabético';
+        if (!Validator::validateAlphanumeric($value)) {
+            $this->data_error = 'El carnet debe ser un valor alfanumérico';
             return false;
         } elseif (Validator::validateLength($value, $min, $max)) {
-            $this->apellido = $value;
+            $this->carnet = $value;
             return true;
         } else {
-            $this->data_error = 'El apellido debe tener una longitud entre ' . $min . ' y ' . $max;
+            $this->data_error = 'El carnet debe tener una longitud de ' . $min;
             return false;
         }
     }
 
-    public function setCorreo($value, $min = 8, $max = 100)
+    public function setCorreo($value, $min = 8, $max = 40)
     {
         if (!Validator::validateEmail($value)) {
             $this->data_error = 'El correo no es válido';
@@ -84,3 +86,4 @@ class AdministradorData extends AdministradorHandler
         return $this->data_error;
     }
 }
+?>

@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center" style="height: 100vh;">
             <div>
-                <form class=" d-none form_container shadow-lg">
+                <form class=" d-none form_container shadow-lg" id="loginForm">
                     <div class="title_container">
                         <p class="title">Instituto Técnico Ricaldone</p>
                         <span class="subtitle">¡Bienvenido!</span>
@@ -65,11 +65,6 @@
                                         class="form-control" required oninput="formatAlphabetic(this)">
                                 </div>
                                 <div class="col-sm-12 col-md-6">
-                                    <label for="apellidoAdminSignup" class="form-label">Apellido</label>
-                                    <input id="apellidoAdminSignup" type="text" name="apellidoAdministrador"
-                                        class="form-control" required oninput="formatAlphabetic(this)">
-                                </div>
-                                <div class="col-sm-12 col-md-6">
                                     <label for="emailAdminSignup" class="form-label">Correo</label>
                                     <input id="emailAdminSignup" type="email" name="correoAdministrador"
                                         class="form-control" required oninput="formatEmail(this)">
@@ -114,7 +109,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../../controllers/utils/validar_inicio.js"></script></body>
+    <script src="../../controllers/utils/validar_inicio.js"></script>
     <script src="../../controllers/admin/IndexController.js"></script>
-
+    <script src="../../controllers/utils/components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script3>
 </html>

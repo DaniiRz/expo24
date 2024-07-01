@@ -1,138 +1,136 @@
 <?php
 // Se incluye la clase para trabajar con la base de datos.
-require_once('../../helpers/database.php');
-/*
- *  Clase para manejar el comportamiento de los datos de la tabla administrador.
- */
+require_once('../helpers/database.php');
 
- class AdministradorHandler{
+/*
+ *  Clase para manejar el comportamiento de los datos de la tabla administradores.
+ */
+class AdministradorHandler {
     /*
      *  Declaración de atributos para el manejo de datos.
      */
     protected $id = null;
     protected $nombre = null;
-    protected $apellido = null;
+    protected $carnet = null;
     protected $correo = null;
     protected $clave = null;
 
-
-     /*
+    /*
      *  Métodos para gestionar la cuenta del administrador.
      */
-
     public function checkPassword($clave)
     {
-        $sql = 'SELECT clave_admin
-                FROM tb_admins
-                WHERE id_admin = ?';
+        $sql = 'SELECT clave_administrador
+                FROM administradores
+                WHERE id_administrador = ?';
         $params = array($_SESSION['idAdministrador']);
         $data = Database::getRow($sql, $params);
         // Se verifica si la contraseña coincide con el hash almacenado en la base de datos.
-        if (password_verify($clave, $data['clave_admin'])) {
+        if (password_verify($clave, $data['clave_administrador'])) {
             return true;
         } else {
             return false;
         }
     }
 
-    
     public function changePassword()
     {
-        $sql = 'UPDATE tb_admins
-                SET clave_admin = ?
-                WHERE id_admin = ?';
+        $sql = 'UPDATE administradores
+                SET clave_administrador = ?
+                WHERE id_administrador = ?';
         $params = array($this->clave, $_SESSION['idAdministrador']);
         return Database::executeRow($sql, $params);
     }
-    
+
     public function checkUser($correo, $clave)
     {
-        $sql = 'SELECT id_admin, correo_admin, clave_admin
-                FROM tb_admins
-                WHERE correo_admin = ?';
+        $sql = 'SELECT id_administrador, correo_administrador, clave_administrador
+                FROM administradores
+                WHERE correo_administrador = ?';
         $params = array($correo);
         if (!($data = Database::getRow($sql, $params))) {
             return false;
-        } elseif (password_verify($clave, $data['clave_admin'])) {
-            $_SESSION['idAdministrador'] = $data['id_admin'];
-            $_SESSION['correoAdministrador'] = $data['correo_admin'];
+        } elseif (password_verify($clave, $data['clave_administrador'])) {
+            $_SESSION['idAdministrador'] = $data['id_administrador'];
+            $_SESSION['correoAdministrador'] = $data['correo_administrador'];
             return true;
         } else {
             return false;
         }
     }
-
 
     /*
      *  Métodos para realizar las operaciones SCRUD (search, create, read, update, and delete).
      */
-    public function searchRows() {
+    public function searchRows()
+    {
         $value = '%' . Validator::getSearchValue() . '%';
-        $sql = 'SELECT id_admin, nombre_admin, apellido_admin, correo_admin
-                FROM tb_admins
-                WHERE apellido_admin LIKE ? OR nombre_admin LIKE ?
-                ORDER BY apellido_admin';
+        $sql = 'SELECT id_administrador, nombre_administrador,correo_administrador
+                FROM administradores
+                WHERE nombre_administrador LIKE ? 
+                ORDER BY nombre_administrador';
         $params = array($value, $value);
         return Database::getRows($sql, $params);
     }
 
     public function readProfile()
     {
-        $sql = 'SELECT id_admin, nombre_admin, apellido_admin, correo_admin
-                FROM tb_admins
-                WHERE id_admin = ?';
+        $sql = 'SELECT id_administrador, nombre_administrador,  correo_administrador
+                FROM administradores
+                WHERE id_administrador = ?';
         $params = array($_SESSION['idAdministrador']);
         return Database::getRow($sql, $params);
     }
 
     public function editProfile()
     {
-        $sql = 'UPDATE tb_admins
-                SET nombre_admin = ?, apellido_admin = ?, correo_admin = ?
-                WHERE id_admin = ?';
-        $params = array($this->nombre, $this->apellido, $this->correo, $_SESSION['nombreAdministrador']);
+        $sql = 'UPDATE administradores
+                SET nombre_administrador = ?,  correo_administrador = ?
+                WHERE id_administrador = ?';
+        $params = array($this->nombre,  $this->correo, $_SESSION['idAdministrador']);
         return Database::executeRow($sql, $params);
     }
 
     public function createRow()
     {
-        $sql = 'INSERT INTO tb_admins(nombre_admin, apellido_admin, correo_admin, clave_admin)
+        $sql = 'INSERT INTO administradores(nombre_administrador, correo_administrador, clave_administrador)
                 VALUES(?, ?, ?, ?)';
-        $params = array($this->nombre, $this->apellido, $this->correo, $this->clave);
+        $params = array($this->nombre, $this->correo, $this->clave);
         return Database::executeRow($sql, $params);
     }
 
     public function readAll()
     {
-        $sql = 'SELECT id_admin, nombre_admin, apellido_admin, correo_admin
-                FROM tb_admins
-                ORDER BY apellido_admin';
+        $sql = 'SELECT id_administrador, nombre_administrador,  correo_administrador
+                FROM administradores
+                ORDER BY nombre_administrador';
         return Database::getRows($sql);
     }
 
     public function readOne()
     {
-        $sql = 'SELECT id_admin, nombre_admin, apellido_admin, correo_admin FROM tb_admins
-                WHERE id_admin = ?';
+        $sql = 'SELECT id_administrador, nombre_administrador, carnet_administrador, correo_administrador
+                FROM administradores
+                WHERE id_administrador = ?';
         $params = array($this->id);
         return Database::getRow($sql, $params);
     }
 
     public function updateRow()
     {
-        $sql = 'UPDATE tb_admins
-                SET nombre_admin = ?, apellido_admin = ?, correo_admin = ?
-                WHERE id_admin = ?';
-        $params = array($this->nombre, $this->apellido, $this->correo, $this->id);
+        $sql = 'UPDATE administradores
+                SET nombre_administrador = ?,  correo_administrador = ?
+                WHERE id_administrador = ?';
+        $params = array($this->nombre,  $this->correo, $this->id);
         return Database::executeRow($sql, $params);
     }
 
     public function deleteRow()
     {
-        $sql = 'DELETE FROM tb_admins
-                WHERE id_admin = ?';
+        $sql = 'DELETE FROM administradores
+                WHERE id_administrador = ?';
         $params = array($this->id);
         return Database::executeRow($sql, $params);
     }
-
 }
+?>

@@ -1,4 +1,4 @@
-const USER_API = '../api/services/admin/administrador.php';
+const USER_API = '../api/services/administradorService.php';
 // Constante para establecer el formulario de registro del primer usuario.
 const SIGNUP_FORM = document.getElementById('signupForm');
 // Constante para establecer el formulario de inicio de sesión.
@@ -9,14 +9,15 @@ const MAIN_TITLE = document.getElementById('mainTitle');
 // Método del evento para cuando el documento ha cargado.
 document.addEventListener('DOMContentLoaded', async () => {
     const DATA = await fetchData(USER_API, 'readUsers');
+    console.log(DATA)
     if (DATA.session) {
-        location.href = 'inicio_admin.html';
+        location.href = 'inicio.html';
     } else if (DATA.status) {
         MAIN_TITLE.textContent = 'Iniciar sesión';
         LOGIN_FORM.classList.remove('d-none');
         sweetAlert(4, DATA.message, true);
     } else {
-        MAIN_TITLE.textContent = 'Registrar primer usuario';
+        // MAIN_TITLE.textContent = 'Registrar primer usuario';
         SIGNUP_FORM.classList.remove('d-none');
         sweetAlert(4, DATA.error, true);
     }
