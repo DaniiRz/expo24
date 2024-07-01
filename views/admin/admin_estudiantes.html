@@ -120,6 +120,16 @@
                                     <select id="cursoEstudiante" name="cursoEstudiante" class="form-select" required>
                                     </select>
                                 </div>
+                                <div class="form-group mt-2">
+                                    <label for="clave">Contraseña:</label>
+                                    <input type="password" class="form-control" id="claveEstudiante"
+                                         name="claveEstudiante" required oninput="formatPassword(this)">
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="confirmarClave" class="form-label">Confirmar contraseña:</label>
+                                    <input id="confirmarClave" type="password" name="confirmarClave"
+                                        class="form-control" required oninput="formatPassword(this)">
+                                </div>
                             </div>
 
                             <!-- Botones del modal -->
