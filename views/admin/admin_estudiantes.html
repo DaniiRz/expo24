@@ -7,332 +7,148 @@
     <title>Estudiantes ITR</title>
     <link type="image/png" rel="icon" href="../../resources/img/logo_rical.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../../resources/css/admin_grupos.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+<!--Navbar-->
 <div id="menuContent"></div>
 
 <body>
-    <div class="container" id="contenedor1">
-        <h3 class="text-center mt-3">Gestiona tus estudiantes</h3>
-        <h3 id="mainTitle"></h3>
-        <div class="d-flex align-items-center justify-content-center mt-5">
-            <div class="inputBox_container mr-3">
-                <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="search icon">
-                    <path
-                        d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z">
-                    </path>
-                </svg>
-                <input class="inputBox" id="inputBox" type="search" placeholder="Escriba aquí">
+
+    <!-- Navbar -->
+    <header>
+        <div id="menuContent"></div>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="mt-2">
+
+        <!-- Titulos -->
+        <div id="textos" class="container-fluid mt-5 text-center">
+            <div class="row justify-content-center">
+                <h3>Gestión de Estudiantes</h3>
             </div>
-            <!-- Botones desplegables -->
-            <div class="dropdown mr-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="true">
-                    Nivel Académico
-                </button>
-                <ul class="dropdown-menu dropdown-menu-dark" data-popper-placement="bottom-start"
-                    style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
-                    <li><a class="dropdown-item active" href="#">Tercer ciclo</a></li>
-                    <li><a class="dropdown-item" href="#">Bachillerato</a></li>
-                </ul>
-            </div>
+        </div>
 
-            <div class="dropdown mr-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="true">
-                    Especialidad
-                </button>
-                <ul class="dropdown-menu dropdown-menu-dark" data-popper-placement="bottom-start"
-                    style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
-                    <li><a class="dropdown-item active" href="#">Automotríz</a></li>
-                    <li><a class="dropdown-item" href="#">Desarrollo de software</a></li>
-                    <li><a class="dropdown-item" href="#">Electromecanica</a></li>
-                    <li><a class="dropdown-item" href="#">Electronica</a></li>
-                    <li><a class="dropdown-item" href="#">Administrativo contable</a></li>
-                    <li><a class="dropdown-item" href="#">Arquitectura</a></li>
-                </ul>
-            </div>
-
-            <div class="dropdown mr-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="true">
-                    Grado
-                </button>
-                <ul class="dropdown-menu dropdown-menu-dark" data-popper-placement="bottom-start"
-                    style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 39.3333px, 0px);">
-                    <li><a class="dropdown-item active" href="#">7° Grado</a></li>
-                    <li><a class="dropdown-item" href="#">8° Grado</a></li>
-                    <li><a class="dropdown-item" href="#">9° Grado</a></li>
-                    <li><a class="dropdown-item" href="#">1° Año</a></li>
-                    <li><a class="dropdown-item" href="#">2° Año</a></li>
-                    <li><a class="dropdown-item" href="#">3° Año</a></li>
-                </ul>
-            </div>
-
-            <!-- Botón para abrir el modal principal -->
-            <button type="button" class="boton-redondo" data-toggle="modal" data-target="#modalPrincipal">
-                <i class="bi bi-plus-square-fill"></i>
-            </button>
-
-            <!-- Modal principal -->
-            <div class="modal fade" id="modalPrincipal" tabindex="-1" role="dialog"
-                aria-labelledby="modalPrincipalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalPrincipalLabel">Agregar estudiantes</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-
-                            <div class="row">
-                                <div class="col-6">
-                                    <!-- Botón para abrir el modal secundario -->
-                                    <div class="h-100 d-inline-block">
-                                        <button type="button" class="btn btn-dark" data-toggle="modal"
-                                            data-target="#modalSecundario">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <img src="../../resources/img/juventud.png" class="img-fluid"
-                                                        alt="">
-                                                </div>
-                                                <div class="col-12 mt-3">
-                                                    <span>Insertar un listado de estudiantes</span>
-                                                </div>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <!-- Botón para abrir el modal tercero -->
-                                    <div class="h-100 d-inline-block">
-                                        <button type="button" class="btn btn-dark" data-toggle="modal"
-                                            data-target="#modalTercero">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <img src="../../resources/img/empleado.png" class="img-fluid"
-                                                        alt="">
-                                                </div>
-                                                <div class="col-12 mt-3">
-                                                    <span>Agregar un estudiante en concreto</span>
-                                                </div>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="container mb-3 justify-content-center mt-5">
+            <!-- Formulario de búsqueda -->
+            <form class="col-sm-12 col-md-6" id="searchForm">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="search" class="form-control" name="search" placeholder="Buscar" required>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#AgregarEstudiante" onclick="openCreate()">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <!-- Botón para abrir un reporte en formato PDF -->
+                        <button type="button" class="btn btn-info" onclick="openReport()">
+                            <i class="fa-solid fa-file-csv"></i>
+                        </button>
                     </div>
                 </div>
-            </div>
-
-            <!-- Modal secundario -->
-            <div class="modal fade" id="modalSecundario" tabindex="-2" role="dialog"
-                aria-labelledby="modalSecundarioLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalSecundarioLabel">Adjunta un listado</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- Contenido del modal secundario -->
-                            <div class="col-sm-12 col-md-12">
-                                <label for="imagenProducto" class="form-label">Archivo</label>
-                                <input id="imagenProducto" type="file" name="imagenProducto" class="form-control"
-                                    accept=".png, .jpg">
-                            </div>
-                        </div>
-                    </div>
+            </form>
+            <!-- Contenedor de las tablas -->
+            <div class="container mb-3 mt-5 justify-content-center">
+                <div class="table-responsive">
+                    <!-- Columnas -->
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                            <tr>
+                                <td colspan="6" id="rowsFound"></td>
+                            </tr>
+                            <th>Carnet</th>
+                            <th>Nombre Completo</th>
+                            <th>Especialidad</th>
+                            <th>Correo</th>
+                            <th>Curso</th>
+                            <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <!-- Filas -->
+                        <tbody id="tableBody"></tbody>
+                    </table>
                 </div>
             </div>
-
-            <!-- Modal Terciario -->
-            <div class="modal fade" id="modalTercero" tabindex="-1" role="dialog" aria-labelledby="modalTerceroLabel"
+            <!-- Modal para agregar un administrador -->
+            <div class="modal fade" id="AgregarEstudiante" tabindex="-1" role="dialog" aria-labelledby="modalTitle"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalTerceroLabel">Agregar estudiante</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body row g-3">
-                            <!-- Contenido del modal Tercero -->
-                            <div class="col-sm-12 col-md-6 ">
-                                <label for="nombreProducto" class="form-label">Nombre Estudiante</label>
-                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
-                                    required>
+                        <form id="saveForm">
+
+                            <!-- Header del modal -->
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitle"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <label for="nombreProducto" class="form-label">Estudiante</label>
-                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
-                                    required>
+
+                            <!-- Body del modal -->
+                            <div class="modal-body">
+                                <!-- Campo oculto para asignar el id del registro al momento de modificar -->
+                                <input type="number" class="d-none" id="idEstudiante" name="idEstudiante">
+                                <div class="form-group">
+                                    <label for="carnet">Carnet:</label>
+                                    <input type="text" class="form-control" id="carnetEstudiante"
+                                        placeholder="Carnet Estudiante" name="carnetEstudiante" required
+                                        oninput="formatAlphabetic(this)">
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="nombre">Nombre Completo:</label>
+                                    <input type="text" class="form-control" id="nombreEstudiante"
+                                        placeholder="Nombre Estudiante" name="nombreEstudiante" required
+                                        oninput="formatAlphabetic(this)">
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="especialidad">Especialidad:</label>
+                                    <select id="especialidadEstudiante" name="especialidadEstudiante"
+                                        class="form-select" required>
+                                    </select>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="correo" class="form-label">Correo: </label>
+                                    <input id="correoEstudiante" type="email" name="correoEstudiante"
+                                        class="form-control" required oninput="formatEmail(this)">
+                                </div>
+                                <div class="form-group mt2">
+                                    <label for="curso">Curso:</label>
+                                    <select id="cursoEstudiante" name="cursoEstudiante" class="form-select" required>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <label for="nombreProducto" class="form-label">Carnet</label>
-                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
-                                    required>
+
+                            <!-- Botones del modal -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-primary">Agregar</button>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <label for="nombreProducto" class="form-label">Correo institucional</label>
-                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
-                                    required>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <label for="nombreProducto" class="form-label">Curso</label>
-                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
-                                    required>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <label for="nombreProducto" class="form-label">Contraseña
-                                </label>
-                                <input id="nombreProducto" type="password" name="descripcionProducto"
-                                    class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Agregar</button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
 
 
-    </div>
-
-    <!-- tabla contenido-->
-
-    <div class="table-responsive mt-5">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col" class="text-center">Nombre Completo</th>
-                    <th scope="col" class="text-center">Especialidad</th>
-                    <th scope="col" class="text-center">Carnet</th>
-                    <th scope="col" class="text-center">Correo Institucional</th>
-                    <th scope="col" class="text-center">Curso</th>
-                    <th scope="col" class="text-center">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
-                    <th scope="row" class="text-center">Desarrollo de Software</th>
-                    <th scope="row" class="text-center">20220215</th>
-                    <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
-                    <th scope="row" class="text-center">3 Software B1</th>
-                    <th>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="boton-redondo btn-p" onclick="editaralumno()">
-                                <i class="bi bi-pencil"></i>
-                            </button>
-                            <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                <i class="bi bi-trash-fill"></i>
-                        </div>
-                        </button>
-                    </th>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
-                    <th scope="row" class="text-center">Desarrollo de Software</th>
-                    <th scope="row" class="text-center">20220215</th>
-                    <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
-                    <th scope="row" class="text-center">3 Software B1</th>
-                    <th>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="boton-redondo btn-p" onclick="editaralumno()">
-                                <i class="bi bi-pencil"></i>
-                            </button>
-                            <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                <i class="bi bi-trash-fill"></i>
-                        </div>
-                        </button>
-                    </th>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-center">Andrés Eleazar Hernández García</th>
-                    <th scope="row" class="text-center">Desarrollo de Software</th>
-                    <th scope="row" class="text-center">20220215</th>
-                    <th scope="row" class="text-center">20220215@ricaldone.edu.sv</th>
-                    <th scope="row" class="text-center">3 Software B1</th>
-                    <th>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="boton-redondo btn-p" onclick="editaralumno()">
-                                <i class="bi bi-pencil"></i>
-                            </button>
-                            <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                <i class="bi bi-trash-fill"></i>
-                        </div>
-                        </button>
-                    </th>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    </div>
-    </div>
+    </main>
 
 
-    <div class="modal fade" id="editaralumno" data-bs-backdrop="static" data-bs-keyboard="false"
-    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-            <div class="modal-content">
-                    <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Editar Alumno</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body row g-3">
-                            <div class="col-sm-12 col-md-6">
-                                    <label for="nombreProducto" class="form-label">Nombre Completo</label>
-                                    <input id="nombreProducto" type="text" name="descripcionProducto"
-                                            class="form-control" required>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                    <label for="nombreProducto" class="form-label">Especialidad</label>
-                                    <input id="nombreProducto" type="text" name="descripcionProducto"
-                                            class="form-control" required>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                    <label for="nombreProducto" class="form-label">Carnet</label>
-                                    <input id="nombreProducto" type="text" name="descripcionProducto"
-                                            class="form-control" required>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                    <label for="nombreProducto" class="form-label">Correo
-                                            institucional</label>
-                                    <input id="nombreProducto" type="text" name="descripcionProducto"
-                                            class="form-control" required>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                    <label for="nombreProducto" class="form-label">Curso a cargo</label>
-                                    <input id="nombreProducto" type="text" name="descripcionProducto"
-                                            class="form-control" required>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                    <label for="nombreProducto" class="form-label">Contraseña</label>
-                                    <input id="nombreProducto" type="password" name="descripcionProducto"
-                                            class="form-control" required>
-                            </div>
-                    </div>
-                    <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Actualizar</button>
-                    </div>
-            </div>
-    </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -344,17 +160,12 @@
     <div id="footerIndex"></div>
     <script src="../../controllers/utils/plantillas.js"></script>
     <script src="../../controllers/utils/cargar_plantillas.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../../controllers/utils/secciones.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../controllers/admin/AlumnoController.js"></script>
+    <!-- Librerías de Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
 
 </body>
 
