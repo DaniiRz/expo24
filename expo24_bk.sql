@@ -31,7 +31,7 @@ CREATE TABLE `administradores` (
   `nombre_administrador` varchar(50) NOT NULL,
   `carnet_administrador` varchar(5) NOT NULL,
   `correo_administrador` varchar(40) NOT NULL,
-  `clave_administrador` varchar(30) NOT NULL,
+  `clave_administrador` varchar(100) NOT NULL,
   PRIMARY KEY (`id_administrador`),
   UNIQUE KEY `nombre_administrador` (`nombre_administrador`),
   UNIQUE KEY `carnet_administrador` (`carnet_administrador`),
