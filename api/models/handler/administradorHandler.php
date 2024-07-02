@@ -1,6 +1,6 @@
 <?php
 // Se incluye la clase para trabajar con la base de datos.
-require_once ('../helpers/database.php');
+require_once('../helpers/database.php');
 
 /*
  *  Clase para manejar el comportamiento de los datos de la tabla administradores.
@@ -19,7 +19,7 @@ class AdministradorHandler
     /*
      *  Métodos para gestionar la cuenta del administrador.
      */
-    public function checkPassword($clave)
+    public function checkPassword($password)
     {
         $sql = 'SELECT clave_administrador
                 FROM administradores
@@ -27,7 +27,7 @@ class AdministradorHandler
         $params = array($_SESSION['idAdministrador']);
         $data = Database::getRow($sql, $params);
         // Se verifica si la contraseña coincide con el hash almacenado en la base de datos.
-        if (password_verify($clave, $data['clave_administrador'])) {
+        if (password_verify($password, $data['clave_administrador'])) {
             return true;
         } else {
             return false;
@@ -43,23 +43,21 @@ class AdministradorHandler
         return Database::executeRow($sql, $params);
     }
 
-    public function checkUser($correo, $clave)
+    public function checkUser($username, $password)
     {
         $sql = 'SELECT id_administrador, correo_administrador, clave_administrador
-                FROM administradores   
-                WHERE correo_administrador = ?';
-        $params = array($correo);
-        if (!($data = Database::getRow($sql, $params))) {
-            return false;
-        } elseif (password_verify($clave, $data['clave_administrador'])) {
+            FROM administradores
+            WHERE  correo_administrador = ?';
+        $params = array($username);
+        $data = Database::getRow($sql, $params);
+        if ($data && password_verify($password, $data['clave_administrador'])) {
             $_SESSION['idAdministrador'] = $data['id_administrador'];
-            $_SESSION['correoAdministrador'] = $data['correo_administrador'];
+            $_SESSION['correo'] = $data['correo_administrador'];
             return true;
         } else {
             return false;
         }
     }
-
     /*
      *  Métodos para realizar las operaciones SCRUD (search, create, read, update, and delete).
      */
