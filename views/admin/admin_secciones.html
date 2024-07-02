@@ -25,8 +25,8 @@
         <div class="d-flex justify-content-end">
             <!-- Button trigger modal -->
             <button type="button" class="boton-redondo" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                <i class="bi bi-plus-square-fill"></i>
-            </button>
+                    <i class="bi bi-plus-square-fill"></i>
+                </button>
 
             <!-- Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -39,8 +39,8 @@
                         </div>
                         <div class="modal-body">
                             <div class="col-sm-12 col-md-6">
-                                <label for="nombreProducto" class="form-label">Nombre seccion</label>
-                                <input id="nombreProducto" type="text" name="descripcionProducto" class="form-control"
+                                <label for="nombreseccion" class="form-label">Nombre seccion</label>
+                                <input id="nombreseccion" type="text" name="nombreseccion" class="form-control"
                                     required>
                             </div>
                         </div>
@@ -62,77 +62,9 @@
                         <th scope="col" class="text-center">Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row" class="text-center">A</th>
-                        <th>
-                            <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="editarseccion()">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                    <i class="bi bi-trash-fill"></i>
-                            </div>
-                            </button>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center">B</th>
-                        <th>
-                            <div class="d-flex justify-content-center ">
-                                <button type="button" class="boton-redondo btn-p" onclick="editarseccion()">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                    <i class="bi bi-trash-fill"></i>
-                            </div>
-                            </button>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center">C</th>
-                        <th>
-                            <div class="d-flex justify-content-center">
-                                <button type="button" class="boton-redondo btn-p" onclick="editarseccion()">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button type="button" class="boton-redondo btn-p" onclick="alertaeliminar()">
-                                    <i class="bi bi-trash-fill"></i>
-                            </div>
-                            </button>
-                        </th>
-                    </tr>
-                </tbody>
             </table>
         </div>
     </div>
-
-    <div class="modal fade" id="editarseccion" data-bs-backdrop="static" data-bs-keyboard="false"
-    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-            <div class="modal-content">
-                    <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Editar seccion</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body row g-3">
-                            <div class="col-sm-12 col-md-6">
-                                    <label for="nombreProducto" class="form-label">Seccion</label>
-                                    <input id="nombreProducto" type="text" name="descripcionProducto"
-                                            class="form-control" required>
-                            </div>
-                            
-                         
-                    <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Actualizar</button>
-                    </div>
-            </div>
-    </div>
-</div>
-
 
     <div id="footerIndex"></div>
 
