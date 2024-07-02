@@ -38,23 +38,9 @@ class EspecialidadData extends EspecialidadHandler
             return false;
         }
     }
-
-    public function setApellido($value, $min = 2, $max = 50)
+    // Método para obtener el error de los datos.
+    public function getDataError()
     {
-        if (!Validator::validateAlphabetic($value)) {
-            $this->data_error = 'El apellido debe ser un valor alfabético';
-            return false;
-        } elseif (Validator::validateLength($value, $min, $max)) {
-            $this->apellido = $value;
-            return true;
-        } else {
-            $this->data_error = 'El apellido debe tener una longitud entre ' . $min . ' y ' . $max;
-            return false;
-        }
+        return $this->data_error;
     }
-        // Método para obtener el error de los datos.
-        public function getDataError()
-        {
-            return $this->data_error;
-        }
 }

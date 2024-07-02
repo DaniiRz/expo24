@@ -1,5 +1,5 @@
 // Constante para completar la ruta de la API.
-const ESPECIALIDAD_API = 'services/especialidad.php';
+const ESPECIALIDAD_API = '../api/services/especialidadService.php';
 // Constante para establecer el formulario de buscar.
 // Constantes para establecer los elementos de la tabla.
 const TABLE_BODY = document.getElementById('tabla_especialidad'),
@@ -15,9 +15,9 @@ const SAVE_FORM = document.getElementById('saveForm'),
 // Método del evento para cuando el documento ha cargado.
 document.addEventListener('DOMContentLoaded', () => {
     // Llamada a la función para mostrar el encabezado y pie del documento.
-    loadTemplate();
+    // loadTemplate();
     // Se establece el título del contenido principal.
-    MAIN_TITLE.textContent = 'Gestionar Especialidades ';
+    // MAIN_TITLE.textContent = 'Gestionar Especialidades ';
     // Llamada a la función para llenar la tabla con los registros existentes.
     fillTable();
 });

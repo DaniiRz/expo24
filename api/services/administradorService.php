@@ -64,7 +64,7 @@ if (isset($_GET['action'])) {
                 if (
                     !$administrador->setId($_POST['idAdministrador']) or
                     !$administrador->setNombre($_POST['nombreAdministrador']) or
-                    !$administrador->setCorreo($_POST['correoAdministrador']) 
+                    !$administrador->setCorreo($_POST['correoAdministrador'])
                 ) {
                     $result['error'] = $administrador->getDataError();
                 } elseif ($administrador->updateRow()) {
@@ -113,7 +113,7 @@ if (isset($_GET['action'])) {
                 $_POST = Validator::validateForm($_POST);
                 if (
                     !$administrador->setNombre($_POST['nombreAdministrador']) or
-                    !$administrador->setCorreo($_POST['correoAdministrador']) 
+                    !$administrador->setCorreo($_POST['correoAdministrador'])
                 ) {
                     $result['error'] = $administrador->getDataError();
                 } elseif ($administrador->editProfile()) {
