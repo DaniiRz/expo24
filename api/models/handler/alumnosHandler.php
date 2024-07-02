@@ -42,9 +42,9 @@ class AlumnoHandler
 
     //METODO CREATE REGISTRO 
     public function createRow (){
-        $sql = 'INSERT INTO alumnos(nombre_alumno, carnet_alumno, correo_alumno, clave_alumno,  id_curso
-                VALUES (?, ?, ?, ?, ?)'; 
-        $params = array($this->nombre, $this->carnet, $this->correo, $this->clave, $this->curso); 
+        $sql = 'INSERT INTO alumnos(id_alumno, nombre_alumno, carnet_alumno, correo_alumno, clave_alumno, id_curso
+                VALUES (?, ?, ?, ?, ?, ?)'; 
+        $params = array($this->id, $this->nombre, $this->carnet, $this->correo, $this->clave, $this->curso); 
         return Database::executeRow($sql, $params); 
     }
 

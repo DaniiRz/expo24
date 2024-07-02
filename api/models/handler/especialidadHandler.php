@@ -31,7 +31,7 @@ class EspecialidadHandler
     {
         $sql = 'INSERT INTO especialidades(nombre_especialidad)
                 VALUES(?)';
-        $params = array($this->nombre, $this->apellido, $this->correo, $this->alias, $this->clave);
+        $params = array($this->nombre);
         return Database::executeRow($sql, $params);
     }
 
