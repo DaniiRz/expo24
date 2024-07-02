@@ -39,7 +39,7 @@ INDICACIONES GENERALES:
 
 ---PHP---
 
-* Usar PascalCase para nombres de clases. ( Ejemplo Handler: DetalleCursoHandler, Data: DetalleCursoData, Services: DetalleCursoService)
+* Usar camelCase para nombres de clases. ( Ejemplo Handler: detalleCursoHandler, Data: detalleCursoData, Services: detalleCursoService)
 * Usar camelCase para nombres de funciones y metodos.
 * Usar snake_case para nombres de variables.
 
